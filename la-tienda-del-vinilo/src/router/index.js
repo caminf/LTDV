@@ -3,6 +3,8 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Cart from '../views/Cart.vue'
 import Register from '../views/Register.vue'
+import Profile from '../views/Profile.vue';
+
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -27,9 +29,11 @@ const router = createRouter(
                 name: 'cart',
                 component: Cart
             },
-
-
-
+            {
+                path: '/profile',
+                name: 'profile',
+                component: Profile
+            }
         ]
     }
 );

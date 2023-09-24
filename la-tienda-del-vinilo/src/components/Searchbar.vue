@@ -1,7 +1,6 @@
 <template>
     <div class="search-item">
         <input v-model="keyword" class="search-bar" type="text" placeholder="Buscar" @change="search" />
-
     </div>
 </template>
 

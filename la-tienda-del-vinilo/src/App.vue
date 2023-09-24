@@ -1,15 +1,14 @@
 <template>
 	<div class="app">
-		<Sidebar />
+		<Sidebar /> <ProfileButton/>
 		<router-view></router-view>
-		<test/>
 
 </div>
 </template>
 
 <script setup>
 import Sidebar from './components/Sidebar.vue'
-import test from './components/test.vue'
+import ProfileButton from './components/ProfileButton.vue';
 </script>
 
 <style lang="scss">
