@@ -1,6 +1,7 @@
 <template>
     <main class="profile-page">
         <h1>Profile</h1>
+        <!-- card -->
         <p>this is a profile page</p>
     </main>
 </template>
