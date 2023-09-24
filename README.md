@@ -17,8 +17,8 @@
 - Al momento de clonar el repositorio en la carpeta raiz ejecutar: `npm install`
   - esto decargara las dependencias necesarias para que el programa funcione
  
-- Luego ejecutar con: `npm run serve`
+- Luego ejecutar con: `npm run dev`
 
-Si todo salio correcto, deberia estar en: `localhost:8080`
+Si todo salio correcto, deberia estar en: `localhost:3000`
 
 (PARTE DE FRONT, SE CREARAN FUTURAS ACTUALIZACIONES A MEDIDA QUE EL PROYECTO AVANCE)
