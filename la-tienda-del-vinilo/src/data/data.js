@@ -16,7 +16,7 @@ export default [
         name: "Nombre articulo 2",
         stock: 2,
         price: 200,
-        description: "Descripcion articulo 2",
+        description: "Descripcion articulo 2 ",
         category: "Rock",
         rating: 2,
 

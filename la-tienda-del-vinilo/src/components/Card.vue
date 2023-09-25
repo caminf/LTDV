@@ -56,19 +56,18 @@
           </v-btn>
 
           <v-btn color="lighten-2" variant="text" @click="">
+
             <span class="material-symbols-outlined">shopping_cart</span>
-            Añadir al Carro
+            <p>Añadir al Carro</p>
           </v-btn>
 
-          <v-select>
 
-          </v-select>
 
         </v-card-actions>
       </div>
 
       <v-card-actions>
-        <v-btn color="lighten-2" variant="text" @click="comprar">
+        <v-btn color="#520100" variant="tonal" @click="comprar">
           Comprar
         </v-btn>
       </v-card-actions>
