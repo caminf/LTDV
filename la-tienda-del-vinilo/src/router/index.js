@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Cart from '../views/Cart.vue'
 import Register from '../views/Register.vue'
+import Login from '../views/Login.vue'
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -27,7 +28,11 @@ const router = createRouter(
                 name: 'cart',
                 component: Cart
             },
-
+            {
+                path: '/login',
+                name: 'login',
+                component: Login
+            }
 
 
         ]
