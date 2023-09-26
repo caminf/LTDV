@@ -4,6 +4,13 @@ import About from '../views/About.vue'
 import Cart from '../views/Cart.vue'
 import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
+
+import Profile from '../views/Profile.vue'
+import EditProfile from '../views/EditProfile.vue'
+import Wishlist from '../views/Wishlist'
+import PreviousPurchases from '../views/PreviousPurchases'
+import PurchaseStatus from '../views/PurchaseStatus'
+
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -35,6 +42,30 @@ const router = createRouter(
             }
 
 
+                path: '/profile',
+                name: 'profile',
+                component: Profile
+            },
+            {
+                path: '/editprofile',
+                name: 'editprofile',
+                component: EditProfile
+            },
+            {
+                path: '/wishlist',
+                name: 'wishlist',
+                component: Wishlist
+            },
+            {
+                path: '/previouspurchases',
+                name: 'previouspurchases',
+                component: PreviousPurchases
+            },
+            {
+                path: '/purchasestatus',
+                name: 'purchasestatus',
+                component: PurchaseStatus
+            },
         ]
     }
 );

@@ -1,14 +1,19 @@
 <template>
 	<div class="app">
-		<Sidebar />
+		<Sidebar/> 
 		<router-view></router-view>
-		<test/>
+
+		<ProfileButton/>
+		
+
 
 </div>
 </template>
 
 <script setup>
 import Sidebar from './components/Sidebar.vue'
+
+import ProfileButton from './components/ProfileButton.vue';
 
 </script>
 
@@ -18,9 +23,11 @@ import Sidebar from './components/Sidebar.vue'
 	--primary: #efe0b9;
 	--primary-alt: #22c55e;
 	--grey: #3E3E32;
+	--light-grey:#D9D9D9;
 	--dark: #520100;
 	--dark-alt: #DB2531;
 	--light: #f1f5f9;
+	--light-alt: #F8E3E3;
 	--sidebar-width: 250px;
 }
 
