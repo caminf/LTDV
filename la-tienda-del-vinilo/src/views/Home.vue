@@ -16,6 +16,7 @@
 
 <script setup>
 import Searchbar from '../components/Searchbar.vue';
+import ProfileButton from '@/components/ProfileButton.vue';
 import Card from '../components/Card.vue';
 import data from '../data/data.js';
 import CategoryButton from '../components/CategoryButton.vue'
