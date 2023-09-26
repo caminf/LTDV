@@ -5,12 +5,12 @@
             <h1>Vinilos</h1>
             <CategoryButton class="CButton" />
         </div>
-
         <v-sheet class="d-flex flex-wrap ">
             <Card v-for="datas in data" :name="datas.name" :description="datas.description" :rating="datas.rating"
                 :price="datas.price"></Card>
         </v-sheet>
 
+        
     </main>
 </template>
 
