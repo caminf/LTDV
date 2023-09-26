@@ -21,6 +21,10 @@
                 <span class="material-symbols-outlined">app_registration</span>
                 <span class="text">Registro</span>
             </router-link>
+            <router-link class="button" to="/login">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span class="text">Acceso</span>
+            </router-link>
             <router-link class="button" to="/cart">
                 <span class="material-symbols-outlined">shopping_cart</span>
                 <span class="text">Carrito</span>

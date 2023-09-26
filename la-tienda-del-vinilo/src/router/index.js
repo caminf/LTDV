@@ -3,6 +3,8 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Cart from '../views/Cart.vue'
 import Register from '../views/Register.vue'
+import Login from '../views/Login.vue'
+
 import Profile from '../views/Profile.vue'
 import EditProfile from '../views/EditProfile.vue'
 import Wishlist from '../views/Wishlist'
@@ -34,6 +36,12 @@ const router = createRouter(
                 component: Cart
             },
             {
+                path: '/login',
+                name: 'login',
+                component: Login
+            }
+
+
                 path: '/profile',
                 name: 'profile',
                 component: Profile
