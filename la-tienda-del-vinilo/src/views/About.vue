@@ -2,7 +2,7 @@
     <main class="about-page">
         <Searchbar />
 
-        <div class="text-center py-5 px-3">
+        <div class="text-center py-2 px-2">
             <h1>Contactanos</h1>
         </div>
 
@@ -47,16 +47,24 @@
 
 
 
-
-
         </v-layout>
+
+
     </main>
+ 
 </template>
 <script setup>
 import Searchbar from '../components/Searchbar.vue';
 </script>
 
 <style lang="scss">
+.footer-style {
+
+    border: 1px solid red;
+    height: 200px;
+    width: 100rem;
+}
+
 .container {
     display: flex;
     border: 1px solid red;
@@ -69,4 +77,5 @@ import Searchbar from '../components/Searchbar.vue';
     display: flex;
     align-content: center;
 }
+
 </style>
