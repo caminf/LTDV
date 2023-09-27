@@ -1,9 +1,8 @@
 <template>
     <main class="edit-profile-page">
-        <Searchbar></Searchbar>
         <h1>Editar Perfil</h1>
         <br>
-        <v-card color=var(--light-grey)>
+        <v-card color="var(--light-grey)">
             <div class="d-flex flex-no-wrap">
                 <v-row no-gutters>
                     <v-col-0>

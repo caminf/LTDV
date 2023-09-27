@@ -1,13 +1,12 @@
 <template>
 	<div class="app">
-		<Sidebar/> 
+		<Sidebar />
 		<router-view></router-view>
 
-		<ProfileButton/>
-		
 
 
-</div>
+
+	</div>
 </template>
 
 <script setup>
@@ -23,7 +22,7 @@ import ProfileButton from './components/ProfileButton.vue';
 	--primary: #efe0b9;
 	--primary-alt: #22c55e;
 	--grey: #3E3E32;
-	--light-grey:#D9D9D9;
+	--light-grey: #D9D9D9;
 	--dark: #520100;
 	--dark-alt: #DB2531;
 	--light: #f1f5f9;

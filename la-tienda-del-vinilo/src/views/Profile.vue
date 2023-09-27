@@ -1,6 +1,5 @@
 <template>
     <main class="profile-page">
-        <Searchbar></Searchbar>
         <div class="d-flex align-center">
             <h1>Perfil</h1> <router-link class="button" to="/editprofile"> 
                 <v-tooltip activator="parent" location="end">

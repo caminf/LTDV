@@ -4,6 +4,8 @@
         <div class="item">
             <h1>Vinilos</h1>
             <CategoryButton class="CButton" />
+            <ProfileButton/>
+
         </div>
         <v-sheet class="d-flex flex-wrap ">
             <Card v-for="datas in data" :name="datas.name" :description="datas.description" :rating="datas.rating"
@@ -28,7 +30,7 @@ import CategoryButton from '../components/CategoryButton.vue'
 <style lang="scss">
 .item {
     display: flex;
-
+    align-items: center;
     justify-content: space-between;
 }
 
