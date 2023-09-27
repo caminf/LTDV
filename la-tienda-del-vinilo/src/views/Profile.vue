@@ -75,7 +75,20 @@
                 <router-link class="button" to="/previouspurchases"> <v-btn color="var(--light-alt)" style="width: 200px;"><h5>Compras anteriores</h5></v-btn></router-link>               
             </v-menu>
             </v-btn> 
-        </div>     
+        </div>
+        <!-- <div>
+            <v-btn color=var(--light-alt) icon="">
+                    <span class="material-symbols-outlined">
+                        shelves
+                    </span>
+                <v-menu activator="parent" location="end">
+                <router-link class="button" to="/registeredusers"><v-btn color="var(--light-alt)" style="width: 200px;"><h5>Usuarios registrados</h5></v-btn></router-link>
+                <router-link class="button" to="/orders"><v-btn color="var(--light-alt)" style="width: 200px;"><h5>Pedidos</h5></v-btn></router-link>
+                <router-link class="button" to="/deliverystatus"> <v-btn color="var(--light-alt)" style="width: 200px;"><h5>Estado Envíos</h5></v-btn></router-link>               
+                <router-link class="button" to="/stock"> <v-btn color="var(--light-alt)" style="width: 200px;"><h5>Stock</h5></v-btn></router-link>               
+            </v-menu>
+            </v-btn> 
+        </div> -->
     </main>
 </template>
 
