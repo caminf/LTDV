@@ -16,34 +16,34 @@
                         <br>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Nombre:</p>
+                                <p class="UserInfoLabel">Nombre:</p>
                             </v-col-6>
                             <v-col>
-                                <v-text-field placeholder="Jane" variant="outlined" density="compact" style="padding-right: 25px;"></v-text-field>
+                                <v-text-field placeholder="Jane" variant="outlined" density="compact" class="TextField"></v-text-field>
                             </v-col>
                         </v-row>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Apellido:</p>
+                                <p class="UserInfoLabel">Apellido:</p>
                             </v-col-6>
                             <v-col>
-                                <v-text-field placeholder="Doe" variant="outlined" density="compact" style="padding-right: 25px;"></v-text-field>
+                                <v-text-field placeholder="Doe" variant="outlined" density="compact" class="TextField"></v-text-field>
                             </v-col>
                         </v-row>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Correo electrónico:</p>
+                                <p class="UserInfoLabel">Correo electrónico:</p>
                             </v-col-6>
                             <v-col>
-                                <v-text-field placeholder="janedoe83@correo.com" variant="outlined" density="compact" style="padding-right: 25px;"></v-text-field>
+                                <v-text-field placeholder="janedoe83@correo.com" variant="outlined" density="compact" class="TextField"></v-text-field>
                             </v-col>
                         </v-row>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Usuario:</p>
+                                <p class="UserInfoLabel">Usuario:</p>
                             </v-col-6>
                             <v-col>
-                                <v-text-field placeholder="jane1983" variant="outlined" density="compact" style="padding-right: 25px;"></v-text-field>  
+                                <v-text-field placeholder="jane1983" variant="outlined" density="compact" class="TextField"></v-text-field>  
                             </v-col>
                         </v-row>
                     </v-col>
@@ -54,8 +54,8 @@
         <div class="d-flex align-center">
             <router-link class="button" to="/profile">
                 <v-btn color=var(--light-alt)>
-                    <h5>Guardar cambios</h5>
-                    <span class="material-symbols-outlined" style="margin: 5px">
+                    <h5 class="ma-1">Guardar cambios</h5>
+                    <span class="material-symbols-outlined">
                         save
                     </span>
                 </v-btn>
@@ -71,4 +71,8 @@ const keyword = ref("");
 import Searchbar from '../components/Searchbar.vue';
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+    .TextField{
+        padding-right: 25px;
+    }
+</style>

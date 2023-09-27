@@ -26,7 +26,7 @@
                         <br>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Nombre:</p>
+                                <p class="UserInfoLabel">Nombre:</p>
                             </v-col-6>
                             <v-col align-self="center">
                                 <p>Hector</p>
@@ -35,7 +35,7 @@
                         <br>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Apellido:</p>
+                                <p class="UserInfoLabel">Apellido:</p>
                             </v-col-6>
                             <v-col align-self="center">
                                 <p>Salamanca</p>
@@ -44,7 +44,7 @@
                         <br>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Correo electrónico:</p>
+                                <p class="UserInfoLabel">Correo electrónico:</p>
                             </v-col-6>
                             <v-col align-self="center">
                                 <p>hector32@gmail.com</p>
@@ -53,7 +53,7 @@
                         <br>
                         <v-row no-gutters>
                             <v-col-6>
-                                <p style="margin:10px">Usuario:</p>
+                                <p class="UserInfoLabel">Usuario:</p>
                             </v-col-6>
                             <v-col align-self="center">
                                 <p>hector32</p>
@@ -70,9 +70,9 @@
                         shelves
                     </span>
                 <v-menu activator="parent" location="end">
-                <router-link class="button" to="/wishlist"><v-btn color="var(--light-alt)" style="width: 200px;"><h5>Lista de deseados</h5></v-btn></router-link>
-                <router-link class="button" to="/purchasestatus"><v-btn color="var(--light-alt)" style="width: 200px;"><h5>Estado de compra</h5></v-btn></router-link>
-                <router-link class="button" to="/previouspurchases"> <v-btn color="var(--light-alt)" style="width: 200px;"><h5>Compras anteriores</h5></v-btn></router-link>               
+                <router-link class="button" to="/wishlist"><v-btn class="MenuButton"><h5>Lista de deseados</h5></v-btn></router-link>
+                <router-link class="button" to="/purchasestatus"><v-btn class="MenuButton"><h5>Estado de compra</h5></v-btn></router-link>
+                <router-link class="button" to="/previouspurchases"> <v-btn class="MenuButton"><h5>Compras anteriores</h5></v-btn></router-link>               
             </v-menu>
             </v-btn> 
         </div>
@@ -82,10 +82,10 @@
                         shelves
                     </span>
                 <v-menu activator="parent" location="end">
-                <router-link class="button" to="/registeredusers"><v-btn color="var(--light-alt)" style="width: 200px;"><h5>Usuarios registrados</h5></v-btn></router-link>
-                <router-link class="button" to="/orders"><v-btn color="var(--light-alt)" style="width: 200px;"><h5>Pedidos</h5></v-btn></router-link>
-                <router-link class="button" to="/deliverystatus"> <v-btn color="var(--light-alt)" style="width: 200px;"><h5>Estado Envíos</h5></v-btn></router-link>               
-                <router-link class="button" to="/stock"> <v-btn color="var(--light-alt)" style="width: 200px;"><h5>Stock</h5></v-btn></router-link>               
+                <router-link class="button" to="/registeredusers"><v-btn class="MenuButton"><h5>Usuarios registrados</h5></v-btn></router-link>
+                <router-link class="button" to="/orders"><v-btn class="MenuButton"><h5>Pedidos</h5></v-btn></router-link>
+                <router-link class="button" to="/deliverystatus"> <v-btn class="MenuButton"><h5>Estado Envíos</h5></v-btn></router-link>               
+                <router-link class="button" to="/stock"> <v-btn class="MenuButton"><h5>Stock</h5></v-btn></router-link>               
             </v-menu>
             </v-btn> 
         </div> -->
@@ -99,4 +99,13 @@ const keyword = ref("");
 import Searchbar from '../components/Searchbar.vue';
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.MenuButton {
+    background-color: var(--light-alt);
+    width: 200px;
+    color: var(--grey);
+}
+.UserInfoLabel{
+    margin:10px;
+}
+</style>
