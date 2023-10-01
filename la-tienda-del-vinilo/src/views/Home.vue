@@ -4,7 +4,7 @@
         <div class="item">
             <h1>Vinilos</h1>
             <CategoryButton class="CButton" />
-            <ProfileButton/>
+            <ProfileButton />
 
         </div>
         <v-sheet class="d-flex flex-wrap ">
@@ -12,7 +12,7 @@
                 :price="datas.price"></Card>
         </v-sheet>
 
-        
+
     </main>
 </template>
 
@@ -38,6 +38,6 @@ import CategoryButton from '../components/CategoryButton.vue'
     display: flex;
 
     align-self: center;
-    
+
 }
 </style>
