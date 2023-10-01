@@ -81,8 +81,14 @@
 
       </v-table>
 
-      
-       
+      <div class="d-flex justify-end py-3">
+        
+        <v-btn variant="tonal" append-icon="mdi-cart-check" >
+          Pagar
+        </v-btn>
+
+      </div>
+
 
 
     </div>
