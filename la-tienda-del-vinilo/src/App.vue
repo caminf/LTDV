@@ -8,8 +8,6 @@
 <script setup>
 import Sidebar from './components/Sidebar.vue'
 
-import ProfileButton from './components/ProfileButton.vue';
-
 </script>
 
 <style lang="scss">

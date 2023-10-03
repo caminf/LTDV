@@ -4,15 +4,15 @@
         <div class="item">
             <h1>Vinilos</h1>
             <CategoryButton class="CButton" />
-            <ProfileButton/>
+            <ProfileButton />
 
         </div>
         <v-sheet class="d-flex flex-wrap ">
-            <Card v-for="datas in data" :name="datas.name" :description="datas.description" :rating="datas.rating"
-                :price="datas.price"></Card>
+            <Card v-for="product in productStore.data" :id="product.id" :name="product.name"
+                :description="product.description" :rating="product.rating" :price="product.price"></Card>
         </v-sheet>
 
-        
+      
     </main>
 </template>
 
@@ -20,9 +20,12 @@
 import Searchbar from '../components/Searchbar.vue';
 import ProfileButton from '@/components/ProfileButton.vue';
 import Card from '../components/Card.vue';
-import data from '../data/data.js';
 import CategoryButton from '../components/CategoryButton.vue'
 
+import { useProductStore } from "@/stores/ProductStore.js"
+
+
+const productStore = useProductStore();
 
 
 </script>
@@ -38,6 +41,6 @@ import CategoryButton from '../components/CategoryButton.vue'
     display: flex;
 
     align-self: center;
-    
+
 }
 </style>
