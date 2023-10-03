@@ -11,17 +11,11 @@
 
         <v-main class="d-flex align-center" style="min-height: 500px;">
           <v-sheet elevation="12" max-width="600" rounded="lg" width="100%" class="pa-4 text-center mx-auto">
-
             <v-icon class="mb-5" color="#520100" icon="mdi-cart" size="112" />
 
             <div class="align-center py-3">
-
               <h4>Carrito Vacio!</h4>
-
             </div>
-
-
-
 
             <v-divider class="mb-4"></v-divider>
 
@@ -32,6 +26,7 @@
                 </v-btn>
               </router-link>
             </div>
+
           </v-sheet>
         </v-main>
       </v-layout>
@@ -82,8 +77,8 @@
       </v-table>
 
       <div class="d-flex justify-end py-3">
-        
-        <v-btn variant="tonal" append-icon="mdi-cart-check" >
+
+        <v-btn variant="tonal" append-icon="mdi-cart-check">
           Pagar
         </v-btn>
 
@@ -92,6 +87,9 @@
 
 
     </div>
+
+    <ProductDetail></ProductDetail>
+
   </main>
 </template>
 
@@ -99,6 +97,7 @@
 import { useCartStore } from '@/stores/CartStore';
 import Searchbar from '@/components/Searchbar.vue';
 import ProfileButton from '@/components/ProfileButton.vue';
+import ProductDetail from './ProductDetail.vue';
 
 const cartStore = useCartStore();
 

@@ -3,7 +3,7 @@
   <v-row no-gutters class="items">
 
 
-    <v-card :loading="loading" max-width="700" variant="tonal">
+    <v-card :loading="loading" max-width="500" style="height: fit-content;" variant="tonal">
 
       <v-img height="250" cover src="../assets/logo.png" />
 
@@ -54,14 +54,52 @@
 
 
 
-        </v-card-actions>
-      </div>
 
+
+        </v-card-actions>
+
+      </div>
       <v-card-actions>
-        <v-btn color="#520100" variant="tonal" @click="verDetalle()">
-          Ver detalles
-        </v-btn>
+
+        <v-dialog width="700">
+          <template v-slot:activator="{ props }">
+            <v-btn v-bind="props" color="#520100" variant="tonal">Ver Detalles</v-btn>
+          </template>
+
+          <template v-slot:default="{ isActive }">
+            <v-row>
+              <v-col cols="6">
+                <v-img src="../assets/logo.png"></v-img>
+
+              </v-col>
+              <v-col cols="6">
+                <v-card :title="props.name">
+
+                  <v-card-text>
+
+                    {{ props.description }}
+
+                  </v-card-text>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+
+                    <v-btn text="Cerrar" @click="isActive.value = false"></v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+            </v-row>
+
+          </template>
+
+
+        </v-dialog>
+
+
       </v-card-actions>
+
+
+
     </v-card>
 
 
@@ -89,16 +127,13 @@ console.log(props.name);
 const cartStore = useCartStore();
 
 
-
-
-function comprar() {
-  loading.value = !loading.value;
-  setTimeout(() => (loading.value = false), 2000)
-}
-
 function selected() {
   is_selected.value = !is_selected.value
+  loading.value = !loading.value;
+  setTimeout(() => (loading.value = false), 2000)
+
 }
+
 
 
 
@@ -108,5 +143,11 @@ function selected() {
 .items {
   padding: 2rem;
   width: fit-content;
+}
+
+.asdf {
+
+  position: absolute;
+
 }
 </style>

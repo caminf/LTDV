@@ -2,7 +2,7 @@
 
    
     <v-form>
-        <v-text-field append-inner-icon="mdi-magnify" v-model="keyword" label="Buscar"
+        <v-text-field append-inner-icon="mdi-magnify" clearable v-model="keyword" label="Buscar"
             @change="search"></v-text-field>
 
     </v-form>
