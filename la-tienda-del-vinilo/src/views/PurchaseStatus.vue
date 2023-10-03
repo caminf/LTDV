@@ -1,7 +1,9 @@
 <template>
     <main class="purchasestatus-page">
-        <Searchbar></Searchbar>
-        <h1>Estado de compra</h1>
+        <div class="item">
+            <h1>Estado de compra</h1>
+            <ProfileButton/>
+        </div>
     </main>
 </template>
 
@@ -13,4 +15,4 @@ import products from '../data/data.js'
 const keyword = ref("");
 </script>
 
-<style></style>
+<style lang="scss"></style>

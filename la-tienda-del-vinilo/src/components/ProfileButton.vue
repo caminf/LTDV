@@ -9,10 +9,10 @@
                 </v-btn>
             </v-col>
         </router-link>
-
     </aside>
 </template>
 
 <script setup>
-
 </script>
+
+<style lang="scss"></style>

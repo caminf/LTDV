@@ -1,7 +1,9 @@
 <template>
     <main class="previouspurchases-page">
-        <Searchbar></Searchbar>
-        <h1>Compras Anteriores</h1>
+        <div class="item">
+            <h1>Compras anteriores</h1>
+            <ProfileButton/>
+        </div>
 
     </main>
 </template>
@@ -11,4 +13,4 @@ import Searchbar from '../components/Searchbar.vue';
 import ProfileButton from '@/components/ProfileButton.vue';
 </script>
 
-<style></style>
+<style lang="scss"></style>
