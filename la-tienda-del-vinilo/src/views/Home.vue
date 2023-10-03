@@ -7,10 +7,9 @@
             <ProfileButton/>
 
         </div>
-        <v-sheet class="d-flex flex-wrap ">
-            <Card v-for="datas in data" :name="datas.name" :description="datas.description" :rating="datas.rating"
-                :price="datas.price"></Card>
-        </v-sheet>
+        <v-sheet class="d-flex flex-wrap">
+      <Card v-for="(datas, index) in data" :key="index" :name="datas.name" :description="datas.description" :rating="datas.rating" :price="datas.price"></Card>
+    </v-sheet>
 
         
     </main>

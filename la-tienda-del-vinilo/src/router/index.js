@@ -10,6 +10,7 @@ import EditProfile from '../views/EditProfile.vue'
 import Wishlist from '../views/Wishlist'
 import PreviousPurchases from '../views/PreviousPurchases'
 import PurchaseStatus from '../views/PurchaseStatus'
+import Admin from '../views/Admin.vue'
 
 const router = createRouter(
     {
@@ -64,6 +65,10 @@ const router = createRouter(
                 path: '/purchasestatus',
                 name: 'purchasestatus',
                 component: PurchaseStatus
+            },{
+                path: '/admin',
+                name: 'admin',
+                component: Admin
             },
         ]
     }
