@@ -6,21 +6,21 @@ export const useCartStore = defineStore("CartStore",
     {
         state: () => {
             return {
-                cartContet: {},
+                cartContent: {},
             }
         },
 
         actions: {
             add(productId) {
-                if (this.cartContet.hasOwnProperty(productId)) {
+                if (this.cartContent.hasOwnProperty(productId)) {
                     
-                    this.cartContet[productId] = {
+                    this.cartContent[productId] = {
                         productId,
-                        quantity: this.cartContet[productId].quantity + 1,
+                        quantity: this.cartContent[productId].quantity + 1,
                     }
 
                 } else {
-                    this.cartContet[productId] = {
+                    this.cartContent[productId] = {
                         productId,
                         quantity: 1,
                     }
@@ -28,17 +28,17 @@ export const useCartStore = defineStore("CartStore",
 
             },
             remove(productId) {
-                if (!this.cartContet[productId]) {
+                if (!this.cartContent[productId]) {
                     return
                 }
-                this.cartContet[productId].quantity -= 1;
+                this.cartContent[productId].quantity -= 1;
 
-                if (this.cartContet[productId].quantity === 0) {
-                    delete this.cartContet[productId];
+                if (this.cartContent[productId].quantity === 0) {
+                    delete this.cartContent[productId];
                 }
             },
             removeProduct(productId) {
-                delete this.cartContet[productId]
+                delete this.cartContent[productId]
             }
 
         },
@@ -46,8 +46,8 @@ export const useCartStore = defineStore("CartStore",
         getters: {
 
             formattedCart() {
-                return Object.keys(this.cartContet).map(productId => {
-                    const product = this.cartContet[productId];
+                return Object.keys(this.cartContent).map(productId => {
+                    const product = this.cartContent[productId];
 
                     return {
                         id: product.productId,
@@ -61,12 +61,12 @@ export const useCartStore = defineStore("CartStore",
             },
             // acc = acumulador
             total() {
-                return Object.keys(this.cartContet).reduce((acc, id) => {
+                return Object.keys(this.cartContent).reduce((acc, id) => {
                     //single product according to the id 
                     const product = product.find(p => p.id === id);
 
                     if (product) {
-                        return acc + product.price * this.cartContet[id].quantity;
+                        return acc + product.price * this.cartContent[id].quantity;
                     }
 
                     return acc + 0;
@@ -74,8 +74,8 @@ export const useCartStore = defineStore("CartStore",
             },
 
             productsTotal() {
-                return Object.keys(this.cartContet).reduce((acc, id) => {
-                    return acc + this.cartContet[id].quantity;
+                return Object.keys(this.cartContent).reduce((acc, id) => {
+                    return acc + this.cartContent[id].quantity;
                 },0);
             }
 

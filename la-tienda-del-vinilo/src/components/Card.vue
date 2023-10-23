@@ -43,7 +43,7 @@
       <div class="px-4">
         <v-card-actions>
           <v-btn color="lighten-2" variant="text" :icon="is_selected ? 'mdi-heart' : 'mdi-heart-outline'"
-            @click="selected()">
+            @click="">
           </v-btn>
 
           <v-btn color="lighten-2" variant="text" @click="cartStore.add(props.id)">
@@ -72,6 +72,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useCartStore } from '../stores/CartStore'
+import { useWishlistStore } from '../stores/WishlistStore';
 
 const loading = ref(false);
 const is_selected = ref(false);
@@ -87,7 +88,7 @@ const props = defineProps({
 console.log(props.name);
 
 const cartStore = useCartStore();
-
+const wishlistStore = useWishlistStore();
 
 
 

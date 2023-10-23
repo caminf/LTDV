@@ -102,7 +102,6 @@ import ProfileButton from '@/components/ProfileButton.vue';
 
 const cartStore = useCartStore();
 
-console.log(cartStore.formattedCart)
 
 
 </script>
