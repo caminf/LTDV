@@ -1,48 +1,56 @@
 export const usersData = [
-    {
-      name: 'Usuario 1',
-      email: 'usuario1@example.com',
-      estadoEnvio: 'En proceso',
-      stock: 10,
-    },
-    {
-      name: 'Usuario 2',
-      email: 'usuario2@example.com',
-      estadoEnvio: 'Entregado',
-      stock: 5,
-    },{
-        name: 'Usuario 1',
-        email: 'usuario1@example.com',
-        estadoEnvio: 'En proceso',
-        stock: 10,
-      },
-      {
-        name: 'Usuario 2',
-        email: 'usuario2@example.com',
-        estadoEnvio: 'Entregado',
-        stock: 5,
-      },{
-        name: 'Usuario 1',
-        email: 'usuario1@example.com',
-        estadoEnvio: 'En proceso',
-        stock: 10,
-      },
-      {
-        name: 'Usuario 2',
-        email: 'usuario2@example.com',
-        estadoEnvio: 'Entregado',
-        stock: 5,
-      },{
-        name: 'Usuario 1',
-        email: 'usuario1@example.com',
-        estadoEnvio: 'En proceso',
-        stock: 10,
-      },
-      {
-        name: 'Usuario 2',
-        email: 'usuario2@example.com',
-        estadoEnvio: 'Entregado',
-        stock: 5,
-      },
-    
-  ];
+  {
+    name: 'Usuario1',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 1,
+  },
+  {
+    name: 'Usuario2',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 2,
+  },{
+    name: 'Usuario3',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 3,
+  },
+  {
+    name: 'Usuario4',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 4,
+  },{
+    name: 'Usuario1',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 1,
+  },
+  {
+    name: 'Usuario2',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 2,
+  },{
+    name: 'Usuario3',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 3,
+  },
+  {
+    name: 'Usuario4',
+    email: 'usuario1@example.com',
+    nombre: 'hector',
+    apellido: 'salamanca',
+    id: 4,
+  },
+  
+];

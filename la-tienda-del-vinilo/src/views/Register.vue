@@ -1,6 +1,4 @@
 <template>
-      <ProfileButton />
-
   <div class="registration-page">
     <h1>Registro</h1>
     <div class="icon-circle">
@@ -38,7 +36,7 @@
 </template>
   
 <script>
-import ProfileButton from '../components/ProfileButton.vue';
+import userData from '../data/dataRegister.js';
 export default {
   data() {
     return {
@@ -61,12 +59,21 @@ export default {
     },
     register() {
       // logica para agregar datos
-
+      // establece 3 caracteres minimos para la contraseña
+      if (this.formData.password.length < 3) {
+        alert('La contraseña debe tener al menos 3 caracteres.');
+        return; 
+      }
+      userData.users.push(this.formData);
       console.log('Datos enviados:', this.formData);
+      this.formData = {
+        username: '',
+        password: '',
+        email: '',
+        name: '',
+        lastname: '',
+      };
     },
-  },
-  components: {
-    ProfileButton
   },
 };
 </script>

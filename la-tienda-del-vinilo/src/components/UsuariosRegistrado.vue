@@ -13,10 +13,11 @@
     </thead>
     <tbody>
       <tr v-for="item in datos" :key="item.name">
-          <td>{{ item.name }}</td>
+        <td>{{ item.name }}</td>
           <td>{{ item.email }}</td>
-          <td>{{ item.estadoEnvio }}</td>
-          <td>{{ item.stock }}</td>
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.apellido }}</td>
+          <td>{{ item.id }}</td>
       </tr>
     </tbody>
   </v-table>

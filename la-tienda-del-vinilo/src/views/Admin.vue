@@ -1,5 +1,6 @@
 <template>
-    <v-card class="card">
+  <v-container class="navbar">
+    <v-card class="navbar">
       <h1 class="font-weight-bold text-h2 py-6">Administrador</h1>
       <v-tabs v-model="tab" bg-color="transparent" grow>
         <v-tab
@@ -17,7 +18,8 @@
                 </div>
             </v-window-item>
          </v-window>
-     </v-card>
+        </v-card>
+      </v-container>
   </template>
   <script>
   import UsuariosRegistrado from '../components/UsuariosRegistrado.vue';
@@ -64,9 +66,12 @@
     }
   </script>
   <style>
-  .card {
-    width: 100%;
-  }
   
-
+  .navbar{
+    height: 500px;
+    width: 999px;
+    margin-left: 20px;
+    align-content: center;
+  }
+ 
   </style>
