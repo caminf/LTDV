@@ -7,12 +7,21 @@
             <ProfileButton/>
 
         </div>
-        <v-sheet class="d-flex flex-wrap ">
+
+        <v-divider class="mb-4"></v-divider>
+
+        
+
+
+
+
+
+        <v-sheet class="d-flex flex-wrap "> 
             <Card v-for="datas in data" :name="datas.name" :description="datas.description" :rating="datas.rating"
                 :price="datas.price"></Card>
         </v-sheet>
 
-        
+
     </main>
 </template>
 
@@ -23,6 +32,10 @@ import Card from '../components/Card.vue';
 import data from '../data/data.js';
 import CategoryButton from '../components/CategoryButton.vue'
 
+import { useProductStore } from "@/stores/ProductStore.js"
+
+
+const productStore = useProductStore();
 
 
 </script>
