@@ -69,10 +69,10 @@
                     <span class="material-symbols-outlined">
                         shelves
                     </span>
-                <v-menu activator="parent" location="end">
-                <router-link class="button" to="/wishlist"><v-btn class="MenuButton"><h5>Lista de deseados</h5></v-btn></router-link>
-                <router-link class="button" to="/purchasestatus"><v-btn class="MenuButton"><h5>Estado de compra</h5></v-btn></router-link>
-                <router-link class="button" to="/previouspurchases"> <v-btn class="MenuButton"><h5>Compras anteriores</h5></v-btn></router-link>               
+            <v-menu activator="parent" location="end">
+                <router-link class="button" to="/userview"><v-btn class="MenuButton"><h5>Lista de deseados</h5></v-btn></router-link>
+                <router-link class="button" to="/userview"><v-btn class="MenuButton"><h5>Estado de compra</h5></v-btn></router-link>
+                <router-link class="button" to="/userview"> <v-btn class="MenuButton"><h5>Compras anteriores</h5></v-btn></router-link>               
             </v-menu>
             </v-btn> 
         </div>
@@ -96,7 +96,6 @@
 import { ref } from 'vue'
 import products from '../data/data.js'
 const keyword = ref("");
-import Searchbar from '../components/Searchbar.vue';
 </script>
 
 <style lang="scss">

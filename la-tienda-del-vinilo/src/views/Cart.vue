@@ -104,6 +104,7 @@ console.log(cartStore.productsTotal);
 console.log(cartStore.formattedCart)
 
 
+
 </script>
 
 <style lang ="scss">
