@@ -7,12 +7,21 @@
             <ProfileButton/>
 
         </div>
+
+        <v-divider class="mb-4"></v-divider>
+
+        
+
+
+
+
+
         <v-sheet class="d-flex flex-wrap "> 
             <Card v-for="datas in data" :name="datas.name" :description="datas.description" :rating="datas.rating"
                 :price="datas.price"></Card>
         </v-sheet>
 
-        
+
     </main>
 </template>
 

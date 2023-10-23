@@ -1,5 +1,5 @@
 <template>
-  <main class="cart-page blue-border">
+  <main class="cart-page">
     <Searchbar />
     <div class="item">
       <h1>Carrito</h1>
@@ -11,17 +11,11 @@
 
         <v-main class="d-flex align-center" style="min-height: 500px;">
           <v-sheet elevation="12" max-width="600" rounded="lg" width="100%" class="pa-4 text-center mx-auto">
-
             <v-icon class="mb-5" color="#520100" icon="mdi-cart" size="112" />
 
             <div class="align-center py-3">
-
               <h4>Carrito Vacio!</h4>
-
             </div>
-
-
-
 
             <v-divider class="mb-4"></v-divider>
 
@@ -32,6 +26,7 @@
                 </v-btn>
               </router-link>
             </div>
+
           </v-sheet>
         </v-main>
       </v-layout>
@@ -54,6 +49,7 @@
               Total
             </th>
             <th>
+              Eliminar Item
             </th>
           </tr>
         </thead>
@@ -74,7 +70,7 @@
             <td>{{ item.price }}</td>
             <td>{{ item.cost }}</td>
             <td>
-              <v-btn icon="mdi-delete" variant="tonal" @click="cartStore.removeProduct(item.id)" />
+              <v-btn icon="mdi-delete" color="red" variant="tonal" @click="cartStore.removeProduct(item.id)" />
             </td>
           </tr>
         </tbody>
@@ -82,16 +78,16 @@
       </v-table>
 
       <div class="d-flex justify-end py-3">
-        
-        <v-btn variant="tonal" append-icon="mdi-cart-check" >
+        <v-btn variant="tonal" append-icon="mdi-cart-check">
           Pagar
         </v-btn>
-
       </div>
 
 
 
     </div>
+
+
   </main>
 </template>
 
@@ -101,6 +97,11 @@ import Searchbar from '@/components/Searchbar.vue';
 import ProfileButton from '@/components/ProfileButton.vue';
 
 const cartStore = useCartStore();
+
+
+console.log(cartStore.productsTotal);
+
+console.log(cartStore.formattedCart)
 
 
 
