@@ -7,12 +7,13 @@
             <ProfileButton />
 
         </div>
-        <v-sheet class="d-flex flex-wrap ">
-            <Card v-for="product in productStore.data" :id="product.id" :name="product.name"
-                :description="product.description" :rating="product.rating" :price="product.price"></Card>
-        </v-sheet>
+        <v-divider class="mb-4"></v-divider>
 
-      
+        
+
+
+
+
     </main>
 </template>
 

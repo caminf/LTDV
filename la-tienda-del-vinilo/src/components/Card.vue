@@ -55,7 +55,6 @@
 
 
 
-
         </v-card-actions>
 
       </div>
@@ -122,6 +121,9 @@ const props = defineProps({
   price: Number,
 });
 
+function iterImg(productId){
+
+}
 console.log(props.name);
 
 const cartStore = useCartStore();

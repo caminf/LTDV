@@ -26,7 +26,20 @@
                 <span class="text">Acceso</span>
             </router-link>
             <router-link class="button" to="/cart">
-                <span class="material-symbols-outlined">shopping_cart</span>
+                <div v-if="cartLoaded()">
+
+                    <v-badge class="material-symbols-outlined" :content="cartStore.productsTotal" color="red">
+                        <v-icon icon="mdi-cart" size="48"></v-icon>
+                    </v-badge>
+
+                </div>
+                <div v-else>
+
+                    <v-icon class="material-symbols-outlined" icon="mdi-cart" size="48"></v-icon>
+
+                </div>
+
+
                 <span class="text">Carrito</span>
             </router-link>
             <router-link class="button" to="/about">
@@ -38,8 +51,14 @@
 </template>
 
 <script setup>
-
+import { useCartStore } from '@/stores/CartStore';
 import { ref } from 'vue'
+
+const cartStore = useCartStore();
+
+function cartLoaded() {
+    return cartStore.formattedCart.length;
+}
 
 const is_expanded = ref(false);
 
@@ -142,6 +161,7 @@ aside {
                 transition: 0.2s ease-out;
 
                 background-color: var(--dark-alt);
+
                 .material-symbols-outlined,
                 .text {
                     color: var(--primary);

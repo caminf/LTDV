@@ -1,5 +1,5 @@
 <template>
-  <main class="cart-page blue-border">
+  <main class="cart-page">
     <Searchbar />
     <div class="item">
       <h1>Carrito</h1>
@@ -49,6 +49,7 @@
               Total
             </th>
             <th>
+              Eliminar Item
             </th>
           </tr>
         </thead>
@@ -69,7 +70,7 @@
             <td>{{ item.price }}</td>
             <td>{{ item.cost }}</td>
             <td>
-              <v-btn icon="mdi-delete" variant="tonal" @click="cartStore.removeProduct(item.id)" />
+              <v-btn icon="mdi-delete" color="red" variant="tonal" @click="cartStore.removeProduct(item.id)" />
             </td>
           </tr>
         </tbody>
@@ -77,18 +78,15 @@
       </v-table>
 
       <div class="d-flex justify-end py-3">
-
         <v-btn variant="tonal" append-icon="mdi-cart-check">
           Pagar
         </v-btn>
-
       </div>
 
 
 
     </div>
 
-    <ProductDetail></ProductDetail>
 
   </main>
 </template>
@@ -97,9 +95,11 @@
 import { useCartStore } from '@/stores/CartStore';
 import Searchbar from '@/components/Searchbar.vue';
 import ProfileButton from '@/components/ProfileButton.vue';
-import ProductDetail from './ProductDetail.vue';
 
 const cartStore = useCartStore();
+
+
+console.log(cartStore.productsTotal);
 
 console.log(cartStore.formattedCart)
 
