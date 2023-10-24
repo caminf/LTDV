@@ -14,10 +14,10 @@
     </thead>
     <tbody>
       <tr v-for="item in datos" :key="item.name">
-        <td>{{ item.name }}</td>
+        <td>{{ item.username }}</td>
           <td>{{ item.email }}</td>
-          <td>{{ item.nombre }}</td>
-          <td>{{ item.apellido }}</td>
+          <td>{{ item.name }}</td>
+          <td>{{ item.lastname }}</td>
           <td>{{ item.id }}</td>
       </tr>
     </tbody>
@@ -26,7 +26,7 @@
   </template>
   
   <script>
-  import { usersData } from '../data/dataUsuarios.js';
+  import { usersData } from '../data/dataUsers.js';
   export default {
     data () {
       return {
@@ -37,3 +37,4 @@
 }
   </script>
 
+../data/dataUsers.js

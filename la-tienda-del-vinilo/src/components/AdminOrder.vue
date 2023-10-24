@@ -13,12 +13,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="item in datosU" :key="item.name">
-          <td>{{ item.numero }}</td>
-          <td>{{ item.usuario }}</td>
-          <td>{{ item.datos }}</td>
-          <td>{{ item.precio }}</td>
-          <td>{{ item.fecha }}</td>
+      <tr v-for="item in datos" :key="item.name">
+          <td>{{ item.number }}</td>
+          <td>{{ item.user }}</td>
+          <td>{{ item.data }}</td>
+          <td>{{ item.price }}</td>
+          <td>{{ item.date }}</td>
       </tr>
     </tbody>
   </v-table>
@@ -26,12 +26,12 @@
   </template>
   
   <script>
-  import { pedidosData } from '../data/dataPedidos.js';
+  import { dataOrders } from '../data/dataAdminOrders.js';
   export default {
     data () {
       return {
-        datosU: pedidosData
+        datos: dataOrders
       }
     },
 }
-  </script>
+  </script>../data/dataOrders.js../data/dataStatusPurchase.js../data/dataAdminOrders.js

@@ -11,6 +11,7 @@ import Wishlist from '../views/Wishlist'
 import PreviousPurchases from '../views/PreviousPurchases'
 import PurchaseStatus from '../views/PurchaseStatus'
 import Admin from '../views/Admin.vue'
+import AddProduct from '../views/AddProduct'
 
 const router = createRouter(
     {
@@ -69,6 +70,11 @@ const router = createRouter(
                 path: '/admin',
                 name: 'admin',
                 component: Admin
+            },
+            {
+                path: '/AddProduct',
+                name: 'AddProduct',
+                component: AddProduct
             },
         ]
     }

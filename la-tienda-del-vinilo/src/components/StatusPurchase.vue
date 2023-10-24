@@ -14,36 +14,39 @@
     </thead>
     <tbody>
       <tr v-for="item in datos" :key="item.name">
-        <td>{{ item.numeroDeOrden }}</td>
-          <td>{{ item.detalle }}</td>
-          <td>{{ item.usuario }}</td>
+        <td>{{ item.orderNumber }}</td>
+          <td>{{ item.detail }}</td>
+          <td>{{ item.user }}</td>
           <td>{{ item.email }}</td>
           <td>
             <v-select 
-              :items="estados"
-              v-model="item.estado"
+              :items="state"
+              v-model="item.state"
               label="Selecciona estado"
-              @change="cambiarEstado(item)"
+              @change="chancheStatus(item)"
             ></v-select>
           </td>
       </tr>
     </tbody>
   </v-table>
+          <td>
+            <v-btn color="primary" @click="SaveStatus(item)">Guardar</v-btn>
+          </td>
     </div>
 </template>
 
 <script>
-import { stockPedido } from '../data/dataPedido.js';
+import { stockOrder } from '../data/dataPurchaseStatus.js';
 export default {
   data () {
       return {
-        datos: stockPedido,
-        estados: ['Verificando pedido', 'En preparación', 'Listo para retiro'],
+        datos: stockOrder,
+        state: ['Verificando pedido', 'En preparación', 'Listo para retiro'],
       }
     },
 
     methods: {
-    cambiarEstado(item) {
+    chancheStatus(item) {
       // índice del elemento 
       const index = this.datos.findIndex((el) => el.id === item.id);
       if (index !== -1) {
@@ -58,10 +61,22 @@ export default {
         console.error('No se pudo encontrar el elemento correspondiente');
       }
     },
+    SaveStatus(item) {
+      const index = this.datos.findIndex((el) => el.id === item.id);
+      if (index !== -1) {
+        stockOrder[index].estado = item.estado;
+        this.$snackbar.show({
+          message: 'Estado guardado exitosamente',
+          color: 'success',
+        });
+      } else {
+        console.error('No se pudo encontrar el elemento correspondiente');
+      }
+    },
   },
 }
 </script>
 
 <style>
 
-</style>
+</style>../data/dataPurchaseStatus.js

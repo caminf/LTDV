@@ -14,18 +14,25 @@
     </thead>
     <tbody>
         <tr v-for="item in datos" :key="item.name">
-        <td>{{ item.nombre }}</td>
-          <td>{{ item.cantidad }}</td>
-          <td>{{ item.precio }}</td>
+        <td>{{ item.name }}</td>
+          <td>{{ item.amount }}</td>
+          <td>{{ item.price }}</td>
           <td>
-            <v-avatar  style="width: 64px; height: 64px;">
-                 <img :src="item.imagen"/>
+            <v-avatar style="width: 64px; height: 64px;">
+                 <img :src="item.detail"/>
                 </v-avatar>
           </td>
           <td>{{ item.id }}</td>
+          <td>
+            <v-btn  color="primary" @click="editProduct(item)">Editar</v-btn>
+            <v-btn color="error" @click="deleteProduct(item)">Eliminar</v-btn>
+          </td>
       </tr>
     </tbody>
   </v-table>
+            <td>
+              <router-link class="button" to="/AddProduct"><v-btn color="blue">Lista de deseados</v-btn></router-link>
+          </td>
     </div>
 </template>
 
@@ -38,7 +45,14 @@ export default {
     
       }
     },
-
+    methods: {
+      editProduct(producto) {
+     
+    },
+    deleteProduct(producto) {
+      
+    },
+  },
 }
 </script>
 
