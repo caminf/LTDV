@@ -25,7 +25,7 @@
   import UsuariosRegistrado from '../components/UsuariosRegistrado.vue';
   import Pedido from '../components/Pedido.vue';
   import Stock from '../components/Stock.vue';
-  import EstadoEnvio from '../components/EstadoEnvio.vue';
+  import EstadoCompra from '../components/EstadoCompra.vue';
 
 
 
@@ -33,11 +33,11 @@
       data() {
     return {
       tab: 'Usuarios registrados', //pestaña inicial
-      items: ['Usuarios registrados', 'Pedidos', 'Estado Envios', 'Stock'],
+      items: ['Usuarios registrados', 'Pedidos', 'Estado Compras', 'Stock'],
       backgroundColors: {
       'Usuarios registrados': 'lightblue', 
       'Pedidos': 'lightgreen', 
-      'Estado Envios': 'lightcoral', 
+      'Estado Compras': 'lightcoral', 
       'Stock': 'lightsalmon', 
     },
     };
@@ -45,6 +45,8 @@
   components: {
     UsuariosRegistrado,
     Pedido,
+    EstadoCompra,
+    Stock,
   },
   methods: {
     getComponentForTab(tabName) {
@@ -54,8 +56,8 @@
           return 'UsuariosRegistrado';
         case 'Pedidos':
           return 'Pedido';
-        case 'Estado Envios':
-          return 'EstadoEnvio';
+        case 'Estado Compras':
+          return 'EstadoCompra';
         case 'Stock':
           return 'Stock';
         default:

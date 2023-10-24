@@ -9,7 +9,6 @@
         <th class="text-left">Usuario</th>
         <th class="text-left">Datos</th>
         <th class="text-left">Precio</th>
-        <th class="text-left">Direccion</th>
         <th class="text-left">Fecha</th>
       </tr>
     </thead>
@@ -19,7 +18,6 @@
           <td>{{ item.usuario }}</td>
           <td>{{ item.datos }}</td>
           <td>{{ item.precio }}</td>
-          <td>{{ item.direccion }}</td>
           <td>{{ item.fecha }}</td>
       </tr>
     </tbody>

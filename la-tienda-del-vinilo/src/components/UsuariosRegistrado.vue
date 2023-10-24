@@ -7,8 +7,9 @@
       <tr>
         <th class="text-left">Usuarios</th>
         <th class="text-left">Correo electronico</th>
-        <th class="text-left">Estados de envio</th>
-        <th class="text-left">Stock</th>
+        <th class="text-left">Nombre</th>
+        <th class="text-left">Apellido</th>
+        <th class="text-left">id</th>
       </tr>
     </thead>
     <tbody>
