@@ -8,6 +8,7 @@ import Profile from '../views/Profile.vue'
 import EditProfile from '../views/EditProfile.vue'
 import Userview from '../views/Userview'
 import Admin from '../views/Admin'
+import AddProduct from '@/views/AddProduct.vue'
 
 const router = createRouter(
     {

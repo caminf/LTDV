@@ -48,7 +48,7 @@ import Wished from '@/components/Wished.vue';
 import { ref } from 'vue';
 
 import { stockOrder } from '@/data/dataPurchaseStatus';
-import { DataOrders } from '@/data/dataAdminOrders';
+import { dataOrders } from '@/data/dataAdminOrders';
 import { useWishlistStore } from '@/stores/WishlistStore';
 import { useCartStore } from '@/stores/CartStore';
 
