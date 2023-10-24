@@ -2,7 +2,7 @@
 <template>
   <v-row no-gutters class="items">
 
-    <v-card :loading="loading" max-width="500" style="height: fit-content;" variant="tonal">
+    <v-card :loading="loading" width="400" style="height: fit-content;" variant="tonal">
 
       <v-img height="250" cover src="../assets/logo.png" />
 

@@ -9,8 +9,6 @@ export default [
         description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
         category: "Pop",
         rating: 1,
-
-
     }, {
         id: 2,
         name: "Nombre articulo 2",
@@ -26,7 +24,7 @@ export default [
         name: "Nombre articulo 3",
         stock: 3,
         price: 300,
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum voluptate praesentium et, ipsum magni odio commodi iure laboriosam ipsa blanditiis eveniet numquam vero perspiciatis est ut fugit. Repellendus, nihil sed?",
+        description: "Lorem ipsum dolor sit amet consectetur, ipsum magni odio commodi iure laboriosam ipsa blanditiis eveniet numquam vero perspiciatis est ut fugit. Repellendus, nihil sed?",
         category: "Metal",
         rating: 3,
 
