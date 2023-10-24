@@ -26,6 +26,7 @@
   </template>
   
   <script>
+
   import { dataOrders } from '../data/dataAdminOrders.js';
   export default {
     data () {

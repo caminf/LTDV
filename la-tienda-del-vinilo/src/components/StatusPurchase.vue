@@ -23,7 +23,7 @@
               :items="state"
               v-model="item.state"
               label="Selecciona estado"
-              @change="chancheStatus(item)"
+              @change="changeStatus(item)"
             ></v-select>
           </td>
       </tr>
@@ -41,12 +41,13 @@ export default {
   data () {
       return {
         datos: stockOrder,
+        estados: ['Verificando pedido', 'En preparación', 'Listo para retiro'],
         state: ['Verificando pedido', 'En preparación', 'Listo para retiro'],
       }
     },
 
     methods: {
-    chancheStatus(item) {
+    changeStatus(item) {
       // índice del elemento 
       const index = this.datos.findIndex((el) => el.id === item.id);
       if (index !== -1) {
@@ -78,5 +79,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>../data/dataPurchaseStatus.js

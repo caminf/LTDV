@@ -1,4 +1,5 @@
 export const dataOrders = [
+
     {
       number: 4535243,
       user: 'Hector2324',
@@ -45,5 +46,4 @@ export const dataOrders = [
       price: 10000,
       date: '3/10/22',
     },
-      
   ];
