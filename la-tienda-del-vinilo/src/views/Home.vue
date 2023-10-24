@@ -9,7 +9,7 @@
         </div>
         <v-divider class="mb-4"></v-divider>
 
-        <v-carousel cycle hide-delimiters show-arrows="hover" >
+        <v-carousel cycle hide-delimiters show-arrows="hover">
             <v-carousel-item v-for="datas in data">
                 <v-sheet class="card-content " border rounded elevation="10">
 
@@ -43,10 +43,12 @@
                         <v-sheet class="d-flex" style="width: 60rem;">
                             <v-sheet class="ma-2 pa-2 me-auto">
 
-                                <v-btn text="Añadir al Carro" color="#520100" variant="tonal" @click="cartStore.add(datas.id)"></v-btn>
+                                <v-btn text="Añadir al Carro" color="#520100" variant="tonal"
+                                    @click="cartStore.add(datas.id)"></v-btn>
                             </v-sheet>
                             <v-sheet class="ma-2 pa-2">
-                                <v-btn text="Favoritos"></v-btn>
+                                <v-btn icon="mdi-heart" color="#520100" variant="tonal"
+                                    @click="wishlistStore.add(datas.id)"></v-btn>
                             </v-sheet>
                             <v-sheet class="ma-2 pa-2">
                                 <v-btn text="Comprar"></v-btn>
@@ -85,7 +87,9 @@ import Card from '../components/Card.vue';
 import data from '../data/data.js';
 import CategoryButton from '../components/CategoryButton.vue'
 import { useCartStore } from '../stores/CartStore'
+import { useWishlistStore } from '@/stores/WishlistStore';
 const cartStore = useCartStore();
+const wishlistStore = useWishlistStore();
 
 
 
