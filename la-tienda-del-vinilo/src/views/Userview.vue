@@ -53,7 +53,7 @@ import { useWishlistStore } from '@/stores/WishlistStore';
 import { useCartStore } from '@/stores/CartStore';
 
 const dataOrder = stockOrder;
-const dataPreviousOrders = DataOrders; 
+const dataPreviousOrders = dataOrders; 
 const wishlistStore = useWishlistStore();
 const tab = ref(null);
 
