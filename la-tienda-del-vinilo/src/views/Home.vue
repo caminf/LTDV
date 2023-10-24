@@ -9,7 +9,7 @@
         </div>
         <v-divider class="mb-4"></v-divider>
 
-        <v-carousel hide-delimiters>
+        <v-carousel cycle hide-delimiters show-arrows="hover" >
             <v-carousel-item v-for="datas in data">
                 <v-sheet class="card-content " border rounded elevation="10">
 

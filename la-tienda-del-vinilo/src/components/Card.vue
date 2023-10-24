@@ -28,18 +28,16 @@
           <div class="text-grey ms-4">
             {{ props.rating }} (+50)
           </div>
+          
+          <div class="my-4 px-4 text-subtitle-1">
+            $ • {{ props.price }}
+          </div>
+
+
         </v-row>
         <!-- precio -->
-        <div class="my-4 text-subtitle-1">
-          $ • {{ props.price }}
-        </div>
-        <div> {{ props.description }} </div>
-      </v-card-text>
-
-      <v-divider class="mx-4 mb-1"></v-divider>
-
-      <div class="px-4">
-        <v-card-actions>
+       
+        <v-card-actions style="display: inline;">
           <v-btn color="lighten-2" variant="text" icon="" @click="wishlistStore.add(props.id)">
             <div v-if="liked()">
               <span class="material-symbols-outlined">favorite</span>
@@ -54,7 +52,10 @@
             <p>Añadir al Carro</p>
           </v-btn>
         </v-card-actions>
-      </div>
+      </v-card-text>
+
+      <v-divider class="mx-4 mb-1"></v-divider>
+
 
       <v-card-actions>
         <v-dialog width="700">
@@ -113,12 +114,12 @@ const cartStore = useCartStore();
 
 
 const wishlistStore = useWishlistStore();
-const loved = ref(false); 
-function liked(){
-  if(wishlistStore.formattedList.find(item => item.id === props.id)){
+const loved = ref(false);
+function liked() {
+  if (wishlistStore.formattedList.find(item => item.id === props.id)) {
     return false
-  } 
-    return true
+  }
+  return true
 }
 
 </script>
