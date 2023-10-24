@@ -27,7 +27,7 @@
       </div>
     </form>
     <div class="page-container">
-      <router-link class="button" to="/profile"><v-btn color="primary" @click="register()">Entrar</v-btn></router-link>
+      <v-btn color="primary" @click="register()">Entrar</v-btn>
       <div class="sidebar-image">
         <img src="../assets/viniloos2.png" alt="Imagen lateral" />
       </div>
@@ -63,7 +63,9 @@ export default {
       if (this.formData.password.length < 3) {
         alert('La contraseña debe tener al menos 3 caracteres.');
         return; 
-      }
+      } else {
+        this.$router.push('/profile');
+        }
       userData.users.push(this.formData);
       console.log('Datos enviados:', this.formData);
       this.formData = {
