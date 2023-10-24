@@ -2,7 +2,6 @@
 <template>
   <v-row no-gutters class="items">
 
-
     <v-card :loading="loading" max-width="500" style="height: fit-content;" variant="tonal">
 
       <v-img height="250" cover src="../assets/logo.png" />
@@ -39,50 +38,42 @@
 
       <v-divider class="mx-4 mb-1"></v-divider>
 
-
       <div class="px-4">
         <v-card-actions>
-          <v-btn color="lighten-2" variant="text" :icon="is_selected ? 'mdi-heart' : 'mdi-heart-outline'"
-            @click="">
+          <v-btn color="lighten-2" variant="text" icon="" @click="wishlistStore.add(props.id)">
+            <div v-if="true">
+              <span class="material-symbols-outlined">favorite</span>
+            </div>
+            <div v-else>
+              <span class="material-symbols-outlined">heart_check</span>
+            </div>
+            <span class=""></span>
           </v-btn>
-
           <v-btn color="lighten-2" variant="text" @click="cartStore.add(props.id)">
-
             <span class="material-symbols-outlined">shopping_cart</span>
             <p>Añadir al Carro</p>
           </v-btn>
-
-
-
-
         </v-card-actions>
-
       </div>
-      <v-card-actions>
 
+      <v-card-actions>
         <v-dialog width="700">
           <template v-slot:activator="{ props }">
             <v-btn v-bind="props" color="#520100" variant="tonal">Ver Detalles</v-btn>
           </template>
-
           <template v-slot:default="{ isActive }">
+
             <v-row>
               <v-col cols="6">
                 <v-img src="../assets/logo.png"></v-img>
-
               </v-col>
               <v-col cols="6">
                 <v-card :title="props.name">
-
                   <v-card-text>
-
                     {{ props.description }}
-
                   </v-card-text>
-
                   <v-card-actions>
                     <v-spacer></v-spacer>
-
                     <v-btn text="Cerrar" @click="isActive.value = false"></v-btn>
                   </v-card-actions>
                 </v-card>
@@ -90,19 +81,10 @@
             </v-row>
 
           </template>
-
-
         </v-dialog>
-
-
       </v-card-actions>
 
-
-
     </v-card>
-
-
-
   </v-row>
 </template>
 
@@ -122,7 +104,7 @@ const props = defineProps({
   price: Number,
 });
 
-function iterImg(productId){
+function iterImg(productId) {
 
 }
 console.log(props.id);

@@ -15,43 +15,31 @@
                     <v-window v-model="tab">
                         <v-window-item v-for="n in 3" :key="n" :value="1">
                             <v-container fluid>
-                                <v-container>
-                                    <v-card color="#F8E3E3">
-                                        <v-row style="justify-content: space-evenly;">
-                                            <v-col cols="2" style="align-self: center;">
-                                                <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
-                                            </v-col>
-                                            <v-col cols="auto" style="align-self: center;">
-                                                <v-card-item>
-                                                    <v-card-title>This is a wished product</v-card-title>
-                                                    <v-card-subtitle>This is the artist of the product</v-card-subtitle>
-                                                </v-card-item>
-                                            </v-col>
-                                            <v-col cols="1" style="align-self: center;">
-                                                <h4>$</h4>
-                                            </v-col>
-                                            <v-col cols="4" style="align-self: center;">
-                                                <v-card-actions>
-                                                    <v-btn color="lighten-2" variant="tonal"
-                                                        @click="cartStore.add(props.id)">
 
-                                                        <span class="material-symbols-outlined">shopping_cart</span>
-                                                        <p>Añadir al Carro</p>
-                                                    </v-btn>
-                                                </v-card-actions>
-                                            </v-col>
-                                        </v-row>
-
-                                    </v-card>
-                                </v-container>
-
-                                <!-- <div v-if="!wishlistStore.formattedCart.length">0</div>
-          <div v-else>2</div> -->
+                                <Wished v-for="item in wishlistStore.formattedList" :id="item.id" :name="item.name" :price="item.price" >
+                                </Wished>    
                             </v-container>
                         </v-window-item>
                         <v-window-item v-for="n in 3" :key="n" :value="2">
                             <v-container fluid>
-                                b
+                                <v-card color="#F8E3E3">
+                                    <v-row style="justify-content: space-evenly;">
+                                        <v-col cols="2" style="align-self: center;">
+                                            <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
+                                        </v-col>
+                                        <v-col cols="5" style="align-self: center;">
+                                            <v-card-item>
+                                                <v-card-title>This is a bought product</v-card-title>
+                                            </v-card-item>
+                                        </v-col>
+                                        <v-col cols="2" style="align-self: center;">
+                                            <h4>Estado</h4>
+                                        </v-col>
+                                        <v-col cols="2" style="align-self: center;">
+                                            dd/mm/aa
+                                        </v-col>
+                                    </v-row>
+                                </v-card>
                             </v-container>
                         </v-window-item>
                         <v-window-item v-for="n in 3" :key="n" :value="3">
@@ -61,20 +49,19 @@
                                         <v-col cols="2" style="align-self: center;">
                                             <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
                                         </v-col>
-                                        <v-col cols="auto" style="align-self: center;">
+
+                                        <v-col cols="5" style="align-self: center;">
                                             <v-card-item>
                                                 <v-card-title>This is a bought product</v-card-title>
-                                                <v-card-subtitle>This is the artist of the product</v-card-subtitle>
                                             </v-card-item>
                                         </v-col>
-                                        <v-col cols="1" style="align-self: center;">
+                                        <v-col cols="2" style="align-self: center;">
+
                                             <h4>$</h4>
                                         </v-col>
                                         <v-col cols="2" style="align-self: center;">
                                             dd/mm/aa
                                         </v-col>
-
-
 
                                     </v-row>
 
@@ -86,7 +73,6 @@
                     </v-window>
                 </v-card>
             </v-container>
-
         </div>
     </main>
 </template>
@@ -94,8 +80,13 @@
 <script setup>
 import ProfileButton from '@/components/ProfileButton.vue';
 import { ref } from 'vue';
+import { useWishlistStore } from '@/stores/WishlistStore';
+import { useCartStore } from '@/stores/CartStore';
+import Wished from '@/components/Wished.vue';
 
+const wishlistStore = useWishlistStore();
 const tab = ref(null);
+
 </script>
 
 <style lang="scss">

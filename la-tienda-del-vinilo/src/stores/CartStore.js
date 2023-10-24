@@ -13,7 +13,7 @@ export const useCartStore = defineStore("CartStore",
         actions: {
             add(productId) {
                 if (this.cartContent.hasOwnProperty(productId)) {
-                    
+
                     this.cartContent[productId] = {
                         productId,
                         quantity: this.cartContent[productId].quantity + 1,
@@ -72,23 +72,11 @@ export const useCartStore = defineStore("CartStore",
                     return acc + 0;
                 }, 0);
             },
-
             productsTotal() {
                 return Object.keys(this.cartContent).reduce((acc, id) => {
                     return acc + this.cartContent[id].quantity;
-                },0);
+                }, 0);
             }
-
-
-
-
-
         }
-
     },
-
-
-
-
-
 );
