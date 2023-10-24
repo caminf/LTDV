@@ -37,9 +37,8 @@
     methods: {
       login() {
         //logica para verificar usuarios
-        if (this.username === 'admin' && this.password === 'admin') {
+        if (this.username === 'usuario' && this.password === 'contraseña') {
           //metodo de validacion
-          this.$router.push('/admin');
           alert('Inicio de sesión exitoso');
         } else {
           this.errorMessage = 'Nombre de usuario o contraseña incorrectos';
