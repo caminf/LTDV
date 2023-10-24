@@ -25,9 +25,9 @@
         <label for="lastname" style="display: none;">Apellido</label>
         <input type="text" id="lastname" v-model="formData.lastname" placeholder="Apellido" />
       </div>
-      <button type="submit">Entrar</button>
     </form>
     <div class="page-container">
+      <router-link class="button" to="/profile"><v-btn color="primary" @click="register()">Entrar</v-btn></router-link>
       <div class="sidebar-image">
         <img src="../assets/viniloos2.png" alt="Imagen lateral" />
       </div>
@@ -79,6 +79,7 @@ export default {
 </script>
   
 <style scoped>
+
 form {
   display: flex;
   flex-direction: column;
