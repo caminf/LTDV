@@ -15,59 +15,20 @@
                     <v-window v-model="tab">
                         <v-window-item v-for="n in 3" :key="n" :value="1">
                             <v-container fluid>
-
-                                <Wished v-for="item in wishlistStore.formattedList" :id="item.id" :name="item.name" :price="item.price" >
-                                </Wished>    
+                                <Wished v-for="item in wishlistStore.formattedList" :id="item.id" :name="item.name"
+                                    :price="item.price">
+                                </Wished>
                             </v-container>
                         </v-window-item>
                         <v-window-item v-for="n in 3" :key="n" :value="2">
                             <v-container fluid>
-                                <v-card color="#F8E3E3">
-                                    <v-row style="justify-content: space-evenly;">
-                                        <v-col cols="2" style="align-self: center;">
-                                            <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
-                                        </v-col>
-                                        <v-col cols="5" style="align-self: center;">
-                                            <v-card-item>
-                                                <v-card-title>This is a bought product</v-card-title>
-                                            </v-card-item>
-                                        </v-col>
-                                        <v-col cols="2" style="align-self: center;">
-                                            <h4>Estado</h4>
-                                        </v-col>
-                                        <v-col cols="2" style="align-self: center;">
-                                            dd/mm/aa
-                                        </v-col>
-                                    </v-row>
-                                </v-card>
+                                <UserOrder v-for="item in dataOrder" :id="item.id" :details="item.detail" :orderNumber="item.orderNumber" :user="item.user"
+                                    :status="item.state"/>
                             </v-container>
                         </v-window-item>
                         <v-window-item v-for="n in 3" :key="n" :value="3">
                             <v-container fluid>
-                                <v-card color="#F8E3E3">
-                                    <v-row style="justify-content: space-evenly;">
-                                        <v-col cols="2" style="align-self: center;">
-                                            <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
-                                        </v-col>
-
-                                        <v-col cols="5" style="align-self: center;">
-                                            <v-card-item>
-                                                <v-card-title>This is a bought product</v-card-title>
-                                            </v-card-item>
-                                        </v-col>
-                                        <v-col cols="2" style="align-self: center;">
-
-                                            <h4>$</h4>
-                                        </v-col>
-                                        <v-col cols="2" style="align-self: center;">
-                                            dd/mm/aa
-                                        </v-col>
-
-                                    </v-row>
-
-                                </v-card>
-                                <!-- <div v-if="!wishlistStore.formattedCart.length">1</div>
-          <div v-else></div> -->
+                                <PreviouslyPurchased v-for="item in dataPreviousOrders" :id="item.id" :user="item.user" :detail="item.data" :price="item.price" :date="item.date"/>
                             </v-container>
                         </v-window-item>
                     </v-window>
@@ -79,11 +40,20 @@
 
 <script setup>
 import ProfileButton from '@/components/ProfileButton.vue';
-import { ref } from 'vue';
-import { useWishlistStore } from '@/stores/WishlistStore';
-import { useCartStore } from '@/stores/CartStore';
+import UserOrder from '@/components/UserOrder.vue'
+import PreviouslyPurchased from '@/components/PreviouslyPurchased.vue';
 import Wished from '@/components/Wished.vue';
 
+
+import { ref } from 'vue';
+
+import { stockOrder } from '@/data/dataPurchaseStatus';
+import { DataOrders } from '@/data/dataAdminOrders';
+import { useWishlistStore } from '@/stores/WishlistStore';
+import { useCartStore } from '@/stores/CartStore';
+
+const dataOrder = stockOrder;
+const dataPreviousOrders = DataOrders; 
 const wishlistStore = useWishlistStore();
 const tab = ref(null);
 

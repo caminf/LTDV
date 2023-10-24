@@ -1,7 +1,8 @@
 <template>
   <v-container class="navbar">
+    <h1 class="font-weight-bold text-h2 py-6">Administrador</h1>
     <v-card class="navbar">
-      <h1 class="font-weight-bold text-h2 py-6">Administrador</h1>
+
       <v-tabs v-model="tab" bg-color="transparent" grow>
         <v-tab
           v-for="item in items"
@@ -22,10 +23,10 @@
       </v-container>
   </template>
   <script>
-  import UsuariosRegistrado from '../components/UsuariosRegistrado.vue';
-  import Pedido from '../components/Pedido.vue';
+  import RegisteredUsers from '../components/RegisteredUsers.vue';
+  import AdminOrder from '../components/AdminOrder.vue';
   import Stock from '../components/Stock.vue';
-  import EstadoCompra from '../components/EstadoCompra.vue';
+  import StatusPurchase from '../components/StatusPurchase.vue';
 
 
 
@@ -43,9 +44,9 @@
     };
   },
   components: {
-    UsuariosRegistrado,
-    Pedido,
-    EstadoCompra,
+    RegisteredUsers,
+    AdminOrder,
+    StatusPurchase,
     Stock,
   },
   methods: {
@@ -53,11 +54,11 @@
       // Asocia cada pestaña a su componente correspondiente
       switch (tabName) {
         case 'Usuarios registrados':
-          return 'UsuariosRegistrado';
+          return 'RegisteredUsers';
         case 'Pedidos':
-          return 'Pedido';
+          return 'AdminOrder';
         case 'Estado Compras':
-          return 'EstadoCompra';
+          return 'StatusPurchase';
         case 'Stock':
           return 'Stock';
         default:

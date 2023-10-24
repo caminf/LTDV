@@ -14,16 +14,16 @@
     </thead>
     <tbody>
       <tr v-for="item in datos" :key="item.name">
-        <td>{{ item.numeroDeOrden }}</td>
-          <td>{{ item.detalle }}</td>
-          <td>{{ item.usuario }}</td>
+        <td>{{ item.orderNumber }}</td>
+          <td>{{ item.detail }}</td>
+          <td>{{ item.user }}</td>
           <td>{{ item.email }}</td>
           <td>
             <v-select 
-              :items="estados"
-              v-model="item.estado"
+              :items="state"
+              v-model="item.state"
               label="Selecciona estado"
-              @change="cambiarEstado(item)"
+              @change="changeStatus(item)"
             ></v-select>
           </td>
       </tr>
@@ -33,17 +33,17 @@
 </template>
 
 <script>
-import { stockPedido } from '../data/dataPedido.js';
+import { stockOrder } from '../data/dataPurchaseStatus.js';
 export default {
   data () {
       return {
-        datos: stockPedido,
+        datos: stockOrder,
         estados: ['Verificando pedido', 'En preparación', 'Listo para retiro'],
       }
     },
 
     methods: {
-    cambiarEstado(item) {
+    changeStatus(item) {
       // índice del elemento 
       const index = this.datos.findIndex((el) => el.id === item.id);
       if (index !== -1) {

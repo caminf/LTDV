@@ -6,9 +6,8 @@ import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
 import Profile from '../views/Profile.vue'
 import EditProfile from '../views/EditProfile.vue'
-import Wishlist from '../views/Wishlist'
-import PreviousPurchases from '../views/PreviousPurchases'
-import PurchaseStatus from '../views/PurchaseStatus'
+import Userview from '../views/Userview'
+import Admin from '../views/Admin'
 
 const router = createRouter(
     {
@@ -50,19 +49,14 @@ const router = createRouter(
                 component: EditProfile
             },
             {
-                path: '/wishlist',
-                name: 'wishlist',
-                component: Wishlist
+                path: '/userview',
+                name: 'userview',
+                component: Userview
             },
             {
-                path: '/previouspurchases',
-                name: 'previouspurchases',
-                component: PreviousPurchases
-            },
-            {
-                path: '/purchasestatus',
-                name: 'purchasestatus',
-                component: PurchaseStatus
+                path: '/admin',
+                name: 'admin',
+                component: Admin,
             },
         ]
     }

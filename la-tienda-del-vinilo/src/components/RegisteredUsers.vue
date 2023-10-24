@@ -26,7 +26,7 @@
   </template>
   
   <script>
-  import { usersData } from '../data/dataUsuarios.js';
+  import { usersData } from '../data/dataUsers.js';
   export default {
     data () {
       return {
