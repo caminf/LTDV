@@ -47,8 +47,10 @@
                                     @click="cartStore.add(datas.id)"></v-btn>
                             </v-sheet>
                             <v-sheet class="ma-2 pa-2">
-                                <v-btn icon="mdi-heart" color="#520100" variant="tonal"
-                                    @click="wishlistStore.add(datas.id)"></v-btn>
+                                <v-btn color="#520100" variant="tonal"
+                                    @click="wishlistStore.add(datas.id)">
+                                <v-icon>mdi-heart</v-icon>
+                                </v-btn>
                             </v-sheet>
                             <v-sheet class="ma-2 pa-2">
                                 <v-btn text="Comprar"></v-btn>
@@ -89,9 +91,10 @@ import CategoryButton from '../components/CategoryButton.vue'
 import { useCartStore } from '../stores/CartStore'
 import { useWishlistStore } from '@/stores/WishlistStore';
 const cartStore = useCartStore();
+
 const wishlistStore = useWishlistStore();
 
-
+console.log(wishlistStore.formattedList);
 
 </script>
 

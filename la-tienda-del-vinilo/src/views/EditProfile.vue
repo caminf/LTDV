@@ -37,6 +37,8 @@
                                 <p class="UserInfoLabel">Correo electrónico:</p>
                             </v-col>
                             <v-col>
+                                <div v-if="validateEmail()"></div>
+                                <div v-else></div>
                                 <v-text-field placeholder="janedoe83@correo.com" variant="outlined" density="compact"
                                     class="TextField"></v-text-field>
                             </v-col>
@@ -46,6 +48,8 @@
                                 <p class="UserInfoLabel">Usuario:</p>
                             </v-col>
                             <v-col>
+                                <div v-if="validateNewUsername()"></div>
+                                <div v-else></div>
                                 <v-text-field placeholder="jane1983" variant="outlined" density="compact"
                                     class="TextField"></v-text-field>
                             </v-col>
@@ -73,6 +77,11 @@ import { ref } from 'vue'
 import products from '../data/data.js'
 const keyword = ref("");
 import Searchbar from '../components/Searchbar.vue';
+
+function validateEmail(){}
+
+function validateNewUsername(){}
+
 </script>
 
 <style lang="scss">.TextField {
