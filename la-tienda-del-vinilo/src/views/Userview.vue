@@ -15,6 +15,7 @@
                     <v-window v-model="tab">
                         <v-window-item v-for="n in 3" :key="n" :value="1">
                             <v-container fluid>
+
                                 <Wished v-for="item in wishlistStore.formattedList" :id="item.id" :name="item.name" :price="item.price" >
                                 </Wished>    
                             </v-container>
@@ -48,18 +49,22 @@
                                         <v-col cols="2" style="align-self: center;">
                                             <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
                                         </v-col>
+
                                         <v-col cols="5" style="align-self: center;">
                                             <v-card-item>
                                                 <v-card-title>This is a bought product</v-card-title>
                                             </v-card-item>
                                         </v-col>
                                         <v-col cols="2" style="align-self: center;">
+
                                             <h4>$</h4>
                                         </v-col>
                                         <v-col cols="2" style="align-self: center;">
                                             dd/mm/aa
                                         </v-col>
+
                                     </v-row>
+
                                 </v-card>
                                 <!-- <div v-if="!wishlistStore.formattedCart.length">1</div>
           <div v-else></div> -->
