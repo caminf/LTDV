@@ -31,7 +31,7 @@
     </tbody>
   </v-table>
             <td>
-              <router-link class="button" to="/AddProduct"><v-btn color="blue">Lista de deseados</v-btn></router-link>
+              <router-link class="button" to="/AddProduct"><v-btn color="blue">Agregar Productos</v-btn></router-link>
           </td>
     </div>
 </template>
