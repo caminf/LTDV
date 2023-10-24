@@ -11,25 +11,51 @@
 
         <v-carousel hide-delimiters>
             <v-carousel-item v-for="datas in data">
-                <v-sheet class="card-content" border rounded elevation="10">
+                <v-sheet class="card-content " border rounded elevation="10">
 
-                    <v-row>
+                    <v-row class="car">
 
                         <v-col cols="5" style="height: 20rem;">
-                            <v-img src="../assets/logo.png" ></v-img>
+                            <v-img src="../assets/logo.png"></v-img>
 
                         </v-col>
-                        <v-col cols="7" style="height: 20rem;">
-                            <p>
-                                {{ datas.id }}
-                            </p>
-                            <p>
-                                {{ datas.name }}
-                            </p>
+                        <v-col cols="7" style="height: fit-content;">
+
+                            <h1>{{ datas.name }}</h1>
+
+                            <v-rating :model-value="datas.rating" color="amber" density="compact" half-increments readonly
+                                size="small"></v-rating>
+                            <br>
                             <p>
                                 {{ datas.description }}
+
+
                             </p>
+
+                            <br>
+                            <h4>
+                                $ {{ datas.price }}
+                            </h4>
+
+
                         </v-col>
+
+                        <v-sheet class="d-flex" style="width: 60rem;">
+                            <v-sheet class="ma-2 pa-2 me-auto">
+
+                                <v-btn text="Añadir al Carro" color="#520100" variant="tonal" @click="cartStore.add(datas.id)"></v-btn>
+                            </v-sheet>
+                            <v-sheet class="ma-2 pa-2">
+                                <v-btn text="Favoritos"></v-btn>
+                            </v-sheet>
+                            <v-sheet class="ma-2 pa-2">
+                                <v-btn text="Comprar"></v-btn>
+                            </v-sheet>
+
+
+                        </v-sheet>
+
+
 
                     </v-row>
 
@@ -58,23 +84,35 @@ import ProfileButton from '@/components/ProfileButton.vue';
 import Card from '../components/Card.vue';
 import data from '../data/data.js';
 import CategoryButton from '../components/CategoryButton.vue'
+import { useCartStore } from '../stores/CartStore'
+const cartStore = useCartStore();
 
-import { useProductStore } from "@/stores/ProductStore.js"
-import { useWishlistStore } from '@/stores/WishlistStore.js';
 
-
-const productStore = useProductStore();
-const wishlistStore = useWishlistStore();
 
 </script>
 
 <style lang="scss">
+.buttons {
+    margin-right: 4rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+}
+
+
+.car {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 4rem;
+
+}
+
 .card-content {
-    border: 1px solid red;
     padding-top: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
+
 }
 
 .center-card {
