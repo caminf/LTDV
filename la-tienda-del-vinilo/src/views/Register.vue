@@ -25,9 +25,9 @@
         <label for="lastname" style="display: none;">Apellido</label>
         <input type="text" id="lastname" v-model="formData.lastname" placeholder="Apellido" />
       </div>
-      <button type="submit">Entrar</button>
     </form>
     <div class="page-container">
+      <v-btn color="primary" @click="register()">Entrar</v-btn>
       <div class="sidebar-image">
         <img src="../assets/viniloos2.png" alt="Imagen lateral" />
       </div>
@@ -63,7 +63,9 @@ export default {
       if (this.formData.password.length < 3) {
         alert('La contraseña debe tener al menos 3 caracteres.');
         return; 
-      }
+      } else {
+        this.$router.push('/profile');
+        }
       userData.users.push(this.formData);
       console.log('Datos enviados:', this.formData);
       this.formData = {
@@ -79,6 +81,7 @@ export default {
 </script>
   
 <style scoped>
+
 form {
   display: flex;
   flex-direction: column;

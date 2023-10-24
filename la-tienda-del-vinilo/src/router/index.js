@@ -6,10 +6,8 @@ import Register from '../views/Register.vue'
 import Login from '../views/Login.vue'
 import Profile from '../views/Profile.vue'
 import EditProfile from '../views/EditProfile.vue'
-
 import Userview from '../views/Userview'
 import Admin from '../views/Admin'
-
 
 const router = createRouter(
     {
@@ -60,7 +58,11 @@ const router = createRouter(
                 name: 'admin',
                 component: Admin,
             },
-
+            {
+                path: '/AddProduct',
+                name: 'AddProduct',
+                component: AddProduct
+            },
         ]
     }
 );

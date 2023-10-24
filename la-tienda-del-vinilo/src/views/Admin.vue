@@ -2,7 +2,6 @@
   <v-container class="navbar">
     <h1 class="font-weight-bold text-h2 py-6">Administrador</h1>
     <v-card class="navbar">
-
       <v-tabs v-model="tab" bg-color="transparent" grow>
         <v-tab
           v-for="item in items"
@@ -36,10 +35,7 @@
       tab: 'Usuarios registrados', //pestaña inicial
       items: ['Usuarios registrados', 'Pedidos', 'Estado Compras', 'Stock'],
       backgroundColors: {
-      'Usuarios registrados': 'lightblue', 
-      'Pedidos': 'lightgreen', 
-      'Estado Compras': 'lightcoral', 
-      'Stock': 'lightsalmon', 
+      
     },
     };
   },

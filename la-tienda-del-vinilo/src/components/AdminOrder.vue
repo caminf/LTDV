@@ -26,12 +26,13 @@
   </template>
   
   <script>
-  import { DataOrders } from '../data/dataAdminOrders.js';
+
+  import { dataOrders } from '../data/dataAdminOrders.js';
   export default {
     data () {
       return {
-        datos: DataOrders
+        datos: dataOrders
       }
     },
 }
-  </script>
+  </script>../data/dataOrders.js../data/dataStatusPurchase.js../data/dataAdminOrders.js

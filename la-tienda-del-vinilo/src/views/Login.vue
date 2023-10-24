@@ -26,6 +26,7 @@
   </template>
   
   <script>
+
   export default {
     data() {
       return {
@@ -41,11 +42,14 @@
           //metodo de validacion
           this.$router.push('/admin');
           alert('Inicio de sesión exitoso');
+        }if(this.username === 'user1' && this.password === 'user1'){
+          this.$router.push('/profile');
+          alert('Inicio de sesión exitoso');
         } else {
           this.errorMessage = 'Nombre de usuario o contraseña incorrectos';
         }
       }
-    }
+  },
   };
   </script>
   

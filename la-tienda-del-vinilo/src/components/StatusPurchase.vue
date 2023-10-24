@@ -29,6 +29,9 @@
       </tr>
     </tbody>
   </v-table>
+          <td>
+            <v-btn color="primary" @click="SaveStatus(item)">Guardar</v-btn>
+          </td>
     </div>
 </template>
 
@@ -39,6 +42,7 @@ export default {
       return {
         datos: stockOrder,
         estados: ['Verificando pedido', 'En preparación', 'Listo para retiro'],
+        state: ['Verificando pedido', 'En preparación', 'Listo para retiro'],
       }
     },
 
@@ -58,10 +62,23 @@ export default {
         console.error('No se pudo encontrar el elemento correspondiente');
       }
     },
+    SaveStatus(item) {
+      const index = this.datos.findIndex((el) => el.id === item.id);
+      if (index !== -1) {
+        stockOrder[index].estado = item.estado;
+        this.$snackbar.show({
+          message: 'Estado guardado exitosamente',
+          color: 'success',
+        });
+      } else {
+        console.error('No se pudo encontrar el elemento correspondiente');
+      }
+    },
   },
 }
 </script>
 
 <style>
 
-</style>
+
+</style>../data/dataPurchaseStatus.js
