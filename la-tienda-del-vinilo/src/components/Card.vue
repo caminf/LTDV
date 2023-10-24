@@ -41,7 +41,7 @@
       <div class="px-4">
         <v-card-actions>
           <v-btn color="lighten-2" variant="text" icon="" @click="wishlistStore.add(props.id)">
-            <div v-if="true">
+            <div v-if="liked()">
               <span class="material-symbols-outlined">favorite</span>
             </div>
             <div v-else>
@@ -113,19 +113,13 @@ const cartStore = useCartStore();
 
 
 const wishlistStore = useWishlistStore();
-
-
-
-function selected() {
-  is_selected.value = !is_selected.value
-  loading.value = !loading.value;
-  setTimeout(() => (loading.value = false), 2000)
-
+const loved = ref(false); 
+function liked(){
+  if(wishlistStore.formattedList.find(item => item.id === props.id)){
+    return false
+  } 
+    return true
 }
-
-
-
-
 
 </script>
 <style>

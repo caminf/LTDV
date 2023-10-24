@@ -9,7 +9,7 @@
         </router-link>
     </div>
     <!-- <div>
-        <router-link class="button" to="/adminview">
+        <router-link class="button" to="/admin">
             <v-btn color=var(--light-alt) icon="">
                 <span class="material-symbols-outlined">
                     shelves

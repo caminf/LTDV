@@ -7,6 +7,9 @@ import Login from '../views/Login.vue'
 import Profile from '../views/Profile.vue'
 import EditProfile from '../views/EditProfile.vue'
 
+import Userview from '../views/Userview'
+import Admin from '../views/Admin'
+
 
 const router = createRouter(
     {
@@ -47,6 +50,17 @@ const router = createRouter(
                 name: 'editprofile',
                 component: EditProfile
             },
+            {
+                path: '/userview',
+                name: 'userview',
+                component: Userview
+            },
+            {
+                path: '/admin',
+                name: 'admin',
+                component: Admin,
+            },
+
         ]
     }
 );
