@@ -7,17 +7,10 @@
             <ProfileButton/>
 
         </div>
-
         <v-divider class="mb-4"></v-divider>
 
-        
-
-
-
-
-
         <v-sheet class="d-flex flex-wrap "> 
-            <Card v-for="datas in data" :name="datas.name" :description="datas.description" :rating="datas.rating"
+            <Card v-for="datas in data" :id="datas.id" :name="datas.name" :description="datas.description" :rating="datas.rating"
                 :price="datas.price"></Card>
         </v-sheet>
 
@@ -33,10 +26,11 @@ import data from '../data/data.js';
 import CategoryButton from '../components/CategoryButton.vue'
 
 import { useProductStore } from "@/stores/ProductStore.js"
+import { useWishlistStore } from '@/stores/WishlistStore.js';
 
 
 const productStore = useProductStore();
-
+const wishlistStore = useWishlistStore();
 
 </script>
 
