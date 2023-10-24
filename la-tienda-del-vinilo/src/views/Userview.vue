@@ -19,8 +19,7 @@
                                     <v-card color="#F8E3E3">
                                         <v-row style="justify-content: space-evenly;">
                                             <v-col cols="2" style="align-self: center;">
-                                                <v-img class="ma-4" height="60" src="../assets/logo.png"
-                                                    ></v-img>
+                                                <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
                                             </v-col>
                                             <v-col cols="auto" style="align-self: center;">
                                                 <v-card-item>
@@ -28,8 +27,8 @@
                                                     <v-card-subtitle>This is the artist of the product</v-card-subtitle>
                                                 </v-card-item>
                                             </v-col>
-                                            <v-col cols="1" style="align-self: center;"> 
-                                                <h4 >$</h4>
+                                            <v-col cols="1" style="align-self: center;">
+                                                <h4>$</h4>
                                             </v-col>
                                             <v-col cols="4" style="align-self: center;">
                                                 <v-card-actions>
@@ -58,29 +57,28 @@
                         <v-window-item v-for="n in 3" :key="n" :value="3">
                             <v-container fluid>
                                 <v-card color="#F8E3E3">
-                                        <v-row style="justify-content: space-evenly;">
-                                            <v-col cols="2" style="align-self: center;">
-                                                <v-img class="ma-4" height="60" src="../assets/logo.png"
-                                                    ></v-img>
-                                            </v-col>
-                                            <v-col cols="auto" style="align-self: center;">
-                                                <v-card-item>
-                                                    <v-card-title>This is a bought product</v-card-title>
-                                                    <v-card-subtitle>This is the artist of the product</v-card-subtitle>
-                                                </v-card-item>
-                                            </v-col>
-                                            <v-col cols="1" style="align-self: center;"> 
-                                                <h4 >$</h4>
-                                            </v-col>
-                                            <v-col cols="2" style="align-self: center;">
-                                                dd/mm/aa
-                                            </v-col>
+                                    <v-row style="justify-content: space-evenly;">
+                                        <v-col cols="2" style="align-self: center;">
+                                            <v-img class="ma-4" height="60" src="../assets/logo.png"></v-img>
+                                        </v-col>
+                                        <v-col cols="auto" style="align-self: center;">
+                                            <v-card-item>
+                                                <v-card-title>This is a bought product</v-card-title>
+                                                <v-card-subtitle>This is the artist of the product</v-card-subtitle>
+                                            </v-card-item>
+                                        </v-col>
+                                        <v-col cols="1" style="align-self: center;">
+                                            <h4>$</h4>
+                                        </v-col>
+                                        <v-col cols="2" style="align-self: center;">
+                                            dd/mm/aa
+                                        </v-col>
 
 
 
-                                        </v-row>
+                                    </v-row>
 
-                                    </v-card>
+                                </v-card>
                                 <!-- <div v-if="!wishlistStore.formattedCart.length">1</div>
           <div v-else></div> -->
                             </v-container>

@@ -125,10 +125,14 @@ const props = defineProps({
 function iterImg(productId){
 
 }
-console.log(props.name);
+console.log(props.id);
 
 const cartStore = useCartStore();
+
+
 const wishlistStore = useWishlistStore();
+
+
 
 function selected() {
   is_selected.value = !is_selected.value
