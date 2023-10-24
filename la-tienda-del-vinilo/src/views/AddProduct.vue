@@ -13,13 +13,13 @@
           <v-text-field
             ref="name"
             v-model="name"
-            :rules="[() => !!Nombre || 'Campo obligatorio']"
+            :rules="[() => !!name || 'Campo obligatorio']"
             :error-messages="errorMessages"
             label="Nombre del producto"
             required
           ></v-text-field>
           <v-text-field
-            ref="Stocl"
+            ref="Stock"
             v-model="stock"
             :rules="[
               () => !!stock || 'Campo obligatorio',
@@ -29,18 +29,23 @@
             required
           ></v-text-field>
           <v-text-field
-            ref="precio"
-            v-model="precio"
-            :rules="[() => !!precio || 'Campo Obligatio',
+            ref="price"
+            v-model="price"
+            :rules="[() => !!price || 'Campo Obligatio',
              addressCheck]"
             label="Precio del producto"
-            placeholder="El Paso"
             required
           ></v-text-field>
           <v-file-input
                 accept="image/*"
                 label="Ingrese el archivo de la imagen"
             ></v-file-input>
+            <v-select 
+             :items="state"
+             v-model="selectedState"
+             label="Selecciona una categoria"
+             @change="changeStatus"
+              ></v-select>
         </v-card-text>
         <v-divider class="mt-12"></v-divider>
         <v-card-actions>
@@ -61,10 +66,10 @@
                   @click="resetForm"
                   v-on="on"
                 >
-                  <v-icon>mdi-refresh</v-icon>
+                  
                 </v-btn>
               </template>
-              <span>Refresh form</span>
+             
             </v-tooltip>
           </v-slide-x-reverse-transition>
           <v-btn
@@ -86,21 +91,19 @@
     data: () => ({
       errorMessages: '',
       name: null,
-      address: null,
-      city: null,
-      state: null,
-      zip: null,
+      stock: null,
+      price: null,
       formHasErrors: false,
+      selectedState: null, 
+      state: ['Rock', 'Jazz', 'Funk','Punk','Disco'], 
     }),
 
     computed: {
       form () {
         return {
           name: this.name,
-          address: this.address,
-          city: this.city,
-          state: this.state,
-          zip: this.zip,
+          stock: this.stock,
+          price: this.price,
         }
       },
     },
@@ -123,9 +126,6 @@
         this.errorMessages = []
         this.formHasErrors = false
 
-        Object.keys(this.form).forEach(f => {
-          this.$refs[f].reset()
-        })
       },
       submit () {
         this.formHasErrors = false

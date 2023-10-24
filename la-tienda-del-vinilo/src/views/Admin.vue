@@ -22,10 +22,10 @@
       </v-container>
   </template>
   <script>
-  import UsuariosRegistrado from '../components/RegisteredUsers.vue';
-  import Pedido from '../components/AdminOrder.vue';
+  import RegisteredUsers from '../components/RegisteredUsers.vue';
+  import AdminOrder from '../components/AdminOrder.vue';
   import Stock from '../components/Stock.vue';
-  import EstadoCompra from '../components/StatusPurchase.vue';
+  import StatusPurchase from '../components/StatusPurchase.vue';
 
 
 
@@ -40,9 +40,9 @@
     };
   },
   components: {
-    UsuariosRegistrado,
-    Pedido,
-    EstadoCompra,
+    RegisteredUsers,
+    AdminOrder,
+    StatusPurchase,
     Stock,
   },
   methods: {
@@ -50,11 +50,11 @@
       // Asocia cada pestaña a su componente correspondiente
       switch (tabName) {
         case 'Usuarios registrados':
-          return 'UsuariosRegistrado';
+          return 'RegisteredUsers';
         case 'Pedidos':
-          return 'Pedido';
+          return 'AdminOrder';
         case 'Estado Compras':
-          return 'EstadoCompra';
+          return 'StatusPurchase';
         case 'Stock':
           return 'Stock';
         default:
