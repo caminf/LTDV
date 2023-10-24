@@ -4,7 +4,7 @@ export const stockData = [
       nombre: 'disco1',
       cantidad: 6,
       precio: 3000,
-      detalle: '',
+      detalle: '../assets/disco-de-vinilo.png',
       
     },
     {
@@ -12,14 +12,14 @@ export const stockData = [
         nombre: 'disco4',
         cantidad: 5,
         precio: 12000,
-        detalle: '',
+        detalle: '../assets/disco-de-vinilo.png',
         
       }, {
         id:3,  
         nombre: 'disco3',
         cantidad: 4,
         precio: 24000,
-        detalle: '',
+        detalle: '../assets/disco-de-vinilo.png',
         
       },
     ];
