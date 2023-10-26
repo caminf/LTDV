@@ -1,6 +1,11 @@
 <template>
     <v-container>
-        <h1 class="font-weight-bold text-h2 py-6">Nuevos Productos</h1>       
+      <br><br>
+      <v-row justify="center">
+        <br><h1>Nuevos Productos</h1><br>
+
+      </v-row>
+      <br><br>
    <v-row justify="center">
     <v-col
       cols="12"
@@ -16,6 +21,7 @@
             :rules="[() => !!name || 'Campo obligatorio']"
             :error-messages="errorMessages"
             label="Nombre del producto"
+            variant="underlined"
             required
           ></v-text-field>
           <v-text-field
@@ -26,6 +32,7 @@
               addressCheck
             ]"
             label="Numero del stock"
+            variant="underlined"
             required
           ></v-text-field>
           <v-text-field
@@ -34,22 +41,25 @@
             :rules="[() => !!price || 'Campo Obligatio',
              addressCheck]"
             label="Precio del producto"
+            variant="underlined"
             required
           ></v-text-field>
           <v-file-input
                 accept="image/*"
                 label="Ingrese el archivo de la imagen"
+                variant="underlined"
             ></v-file-input>
             <v-select 
              :items="state"
              v-model="selectedState"
              label="Selecciona una categoria"
+             variant="underlined"
              @change="changeStatus"
               ></v-select>
         </v-card-text>
         <v-divider class="mt-12"></v-divider>
         <v-card-actions>
-            <router-link class="button" to="/Admin"> <v-btn variant="text">
+            <router-link class="button" to="/Admin"> <v-btn color="#DB2531" variant="text">
             Cancelar
           </v-btn></router-link>
           <v-spacer></v-spacer>
@@ -73,8 +83,8 @@
             </v-tooltip>
           </v-slide-x-reverse-transition>
           <v-btn
-            color="primary"
-            variant="text"
+            color="#520100"
+            variant="outlined"
             @click="submit"
           >
             Guardar

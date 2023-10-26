@@ -1,6 +1,8 @@
 <template>
   <v-container class="navbar">
-    <h1 class="font-weight-bold text-h2 py-6">Administrador</h1>
+    <br>
+    <h1>Administrador</h1>
+    <br>
     <v-card class="navbar">
       <v-tabs v-model="tab" bg-color="transparent" grow>
         <v-tab

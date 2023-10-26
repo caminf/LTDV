@@ -4,7 +4,7 @@ export const stockData = [
       name: 'disco1',
       amount: 6,
       price: 3000,
-      detail: 'src/assets/vinilo.png',
+      detail: 'src/assets/logo.png',
       
     },
     {
@@ -12,7 +12,7 @@ export const stockData = [
         name: 'disco4',
         amount: 5,
         price: 12000,
-        detail: 'src/assets/logo.png',
+        detail: 'src/assets/vinilo.png',
         
       }, {
         id:3,  

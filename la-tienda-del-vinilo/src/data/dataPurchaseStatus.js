@@ -21,5 +21,19 @@ export const stockOrder = [
       user: 'Hector2324',
       email: 'hectorsalamanca@gmail.com',
       state: '',
+      },{
+        id:4,  
+      orderNumber: 4535243,
+      detail: 'Aztex vol2',
+      user: 'Hector2324',
+      email: 'hectorsalamanca@gmail.com',
+      state: '',
+      },{
+        id:5,  
+      orderNumber: 4535243,
+      detail: 'Aztex vol2',
+      user: 'Hector2324',
+      email: 'hectorsalamanca@gmail.com',
+      state: '',
       },
     ];

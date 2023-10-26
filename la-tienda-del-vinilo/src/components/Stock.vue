@@ -1,61 +1,59 @@
 <template>
-   <div>
-      <h2>Stock de productos</h2>
-      <v-table fixed-header
-    height="300px">
-    <thead>
-      <tr>
-        <th class="text-left">Nombre del producto</th>
-        <th class="text-left">Stock</th>
-        <th class="text-left">Precio</th>
-        <th class="text-left">Detalle</th>
-        <th class="text-left">id</th>
-      </tr>
-    </thead>
-    <tbody>
+  <div>
+    <v-table fixed-header height="380px">
+      <thead>
+        <tr>
+          <th class="text-center">Nombre del producto</th>
+          <th class="text-center">Stock</th>
+          <th class="text-center">Precio</th>
+          <th class="text-center">Detalle</th>
+          <th class="text-center">Id</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
         <tr v-for="item in datos" :key="item.name">
-        <td>{{ item.name }}</td>
-          <td>{{ item.amount }}</td>
-          <td>{{ item.price }}</td>
-          <td>
-            <v-avatar style="width: 64px; height: 64px;">
-                 <img :src="item.detail"/>
-                </v-avatar>
+          <td class="text-center">{{ item.name }}</td>
+          <td class="text-center">{{ item.amount }}</td>
+          <td class="text-center">{{ item.price }}</td>
+          <td class="text-center">
+            <v-avatar class="ma-1" size="40" rounded="0">
+              <v-img :src="item.detail"/>
+            </v-avatar>
           </td>
-          <td>{{ item.id }}</td>
-          <td>
-            <v-btn  color="primary" @click="editProduct(item)">Editar</v-btn>
-            <v-btn color="error" @click="deleteProduct(item)">Eliminar</v-btn>
+          <td class="text-center">{{ item.id }}</td>
+          <td class="text-center" style="width: 250px;">
+            <v-btn color="#F8E3E3" @click="editProduct(item)" density="compact">Editar</v-btn>
+            <v-btn color="error" variant="text" @click="deleteProduct(item)" density="compact">Eliminar</v-btn>
           </td>
-      </tr>
-    </tbody>
-  </v-table>
-            <td>
-              <router-link class="button" to="/AddProduct"><v-btn color="blue">Agregar Productos</v-btn></router-link>
-          </td>
-    </div>
+        </tr>
+      </tbody>
+    </v-table>
+    <td>
+      <router-link class="button" to="/AddProduct"><v-btn color="#F8E3E3" class="ma-4">Agregar
+          Productos</v-btn></router-link>
+    </td>
+  </div>
 </template>
 
 <script>
 import { stockData } from '../data/dataStock.js';
 export default {
-    data () {
-      return {
-        datos: stockData,
-    
-      }
-    },
-    methods: {
-      editProduct(producto) {
-     
+  data() {
+    return {
+      datos: stockData,
+
+    }
+  },
+  methods: {
+    editProduct(producto) {
+
     },
     deleteProduct(producto) {
-      
+
     },
   },
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

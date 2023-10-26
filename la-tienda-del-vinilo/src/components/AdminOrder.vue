@@ -1,38 +1,36 @@
 <template>
-    <div>
-      <h2>Pedidos</h2>
-      <v-table fixed-header
-    height="300px">
-    <thead>
-      <tr>
-        <th class="text-left">N° de orden</th>
-        <th class="text-left">Usuario</th>
-        <th class="text-left">Datos</th>
-        <th class="text-left">Precio</th>
-        <th class="text-left">Fecha</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="item in datos" :key="item.name">
-          <td>{{ item.number }}</td>
-          <td>{{ item.user }}</td>
-          <td>{{ item.data }}</td>
-          <td>{{ item.price }}</td>
-          <td>{{ item.date }}</td>
-      </tr>
-    </tbody>
-  </v-table>
-    </div>
-  </template>
+  <div>
+    <v-table fixed-header height="380px">
+      <thead>
+        <tr>
+          <th class="text-center">N° de orden</th>
+          <th class="text-center">Usuario</th>
+          <th class="text-center">Datos</th>
+          <th class="text-center">Precio</th>
+          <th class="text-center">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in datos" :key="item.name">
+          <td class="text-center">{{ item.number }}</td>
+          <td class="text-center">{{ item.user }}</td>
+          <td class="text-center">{{ item.data }}</td>
+          <td class="text-center">{{ item.price }}</td>
+          <td class="text-center">{{ item.date }}</td>
+        </tr>
+      </tbody>
+    </v-table>
+  </div>
+</template>
   
-  <script>
+<script>
 
-  import { dataOrders } from '../data/dataAdminOrders.js';
-  export default {
-    data () {
-      return {
-        datos: dataOrders
-      }
-    },
+import { dataOrders } from '../data/dataAdminOrders.js';
+export default {
+  data() {
+    return {
+      datos: dataOrders
+    }
+  },
 }
-  </script>../data/dataOrders.js../data/dataStatusPurchase.js../data/dataAdminOrders.js
+</script>../data/dataOrders.js../data/dataStatusPurchase.js../data/dataAdminOrders.js
