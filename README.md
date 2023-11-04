@@ -8,8 +8,7 @@
 
 - Vue3
 - NodeJs 18 LTS
-- Maven 3.2+
-- Servidor en MySql
+- Servidor en MongoDB
 - npm
 
 ### Instalacion
@@ -20,5 +19,3 @@
 - Luego ejecutar con: `npm run dev`
 
 Si todo salio correcto, deberia estar en: `localhost:3000`
-
-(PARTE DE FRONT, SE CREARAN FUTURAS ACTUALIZACIONES A MEDIDA QUE EL PROYECTO AVANCE)
