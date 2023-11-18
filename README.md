@@ -45,7 +45,7 @@ Camila:
 - delete: remove item from wishlist
 
 Diferencia con los contratos:
-- Endpoints:
+Endpoints:
 - GET /wishlist => /users/user/:rut/wishlist
 - GET /user/:rut/previouspurchases => /users/user/:rut/previouspurchases
 - POST (no existe) => /users/user/:rut/wishlist
