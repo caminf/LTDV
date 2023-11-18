@@ -34,6 +34,20 @@ Diferencia con los contratos:
 - listar productos devuelve un campo adicional llamado, "imgUrl"
 - search el endpoint que aparece en los contratos para "search" es "/", el endpoint correspondiente es "/products/:id", existen dos endpoint para search ":id", ":name"
 - edit product es un POST en vez de PUT. El endpoint no es "/addProduct" es un POST "/products"
-- add product el endpoint no es "/cart" es "/user/cart/:rut"
+- add product el endpoint no es "/cart" es "/users/user/cart/:rut"
 - delete product from cart no existe como contrato pero se agrego
 
+Camila:
+-get: user wishlist
+-get: user previous purchases
+-post: add item to wishlist
+-put: edit user
+-delete: remove item from wishlist
+
+Diferencia con los contratos:
+-Endpoints:
+GET /wishlist => /users/user/:rut/wishlist
+GET /user/:rut/previouspurchases => /users/user/:rut/previouspurchases
+POST (no existe) => /users/user/:rut/wishlist
+PATCH /admin => PUT /admin/user/:rut/editUser
+DELETE (no existe) => /users/user/:rut/wishlist
