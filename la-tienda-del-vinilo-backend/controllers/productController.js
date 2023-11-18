@@ -1,5 +1,6 @@
 const Product = require('../models/productModel');
 
+
 exports.getAllProducts = async (req, res) => {
     try {
         const products = await Product.find();
@@ -19,7 +20,7 @@ exports.createProduct = async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 };
-
+  
 
 exports.deleteProduct = async (req,res)=>{
     const productId = parseInt(req.body.id);

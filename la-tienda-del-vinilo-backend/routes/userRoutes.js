@@ -8,11 +8,13 @@ const userController = require('../controllers/userController');
 router.get('/users', userController.getAllUsers);
 
 router.post('/users/cart/:rut', userController.addToCart);
+router.get('/users/cart/:rut', userController.getUserCart);
+
+router.delete('/users/cart/:rut', userController.deleteItemFromCart);
+
 router.post('/users/wishlist/:rut', userController.addToWishlist);
 router.delete('/users/wishlist/:rut', userController.removeFromWishlist);
-// router.get('/users/wishlist/:rut', userController.getUserWishlist)
-
-// Get all products
+router.get('/users/wishlist/:rut', userController.getUserWishlist)
 
 
 //create user
