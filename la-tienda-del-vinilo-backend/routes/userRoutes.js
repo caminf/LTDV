@@ -4,27 +4,22 @@ const router = express.Router();
 const userController = require('../controllers/userController');
 
 
-// Get all users
 router.get('/users', userController.getAllUsers);
-
-router.post('/users/cart/:rut', userController.addToCart);
-router.get('/users/cart/:rut', userController.getUserCart);
-
-router.delete('/users/cart/:rut', userController.deleteItemFromCart);
-
-router.post('/users/wishlist/:rut', userController.addToWishlist);
-router.delete('/users/wishlist/:rut', userController.removeFromWishlist);
-router.get('/users/wishlist/:rut', userController.getUserWishlist)
-
-
-//create user
 router.post('/users',userController.createUser);
-
-//Login
 router.post('/users/login',userController.loginUser);
+router.put('/users/user/:rut',userController.updateUser);
 
-//update
-router.put('/users',userController.updateUser);
+router.post('/users/user/cart/:rut', userController.addToCart);
+router.get('/users/user/cart/:rut', userController.getUserCart);
+router.delete('/users/user/cart/:rut', userController.deleteItemFromCart);
 
+router.post('/users/user/wishlist/:rut', userController.addToWishlist);
+router.delete('/users/user/wishlist/:rut', userController.removeFromWishlist);
+router.get('/users/user/wishlist/:rut', userController.getUserWishlist);
+
+router.get('/users/user/previouspurchases/:rut', userController.getUserPreviousPurchases);
+
+
+// router.get('/users/user', userController.getOneUser); (pendiente)
 
 module.exports = router;
