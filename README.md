@@ -46,8 +46,8 @@ Camila:
 
 Diferencia con los contratos:
 - Endpoints:
-GET /wishlist => /users/user/:rut/wishlist
-GET /user/:rut/previouspurchases => /users/user/:rut/previouspurchases
-POST (no existe) => /users/user/:rut/wishlist
-PATCH /admin => PUT /admin/user/:rut/editUser
-DELETE (no existe) => /users/user/:rut/wishlist
+- GET /wishlist => /users/user/:rut/wishlist
+- GET /user/:rut/previouspurchases => /users/user/:rut/previouspurchases
+- POST (no existe) => /users/user/:rut/wishlist
+- PATCH /admin => PUT /admin/user/:rut/editUser
+- DELETE (no existe) => /users/user/:rut/wishlist
