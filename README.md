@@ -38,14 +38,14 @@ Diferencia con los contratos:
 - delete product from cart no existe como contrato pero se agrego
 
 Camila:
--get: user wishlist
--get: user previous purchases
--post: add item to wishlist
--put: edit user
--delete: remove item from wishlist
+- get: user wishlist
+- get: user previous purchases
+- post: add item to wishlist
+- put: edit user
+- delete: remove item from wishlist
 
 Diferencia con los contratos:
--Endpoints:
+- Endpoints:
 GET /wishlist => /users/user/:rut/wishlist
 GET /user/:rut/previouspurchases => /users/user/:rut/previouspurchases
 POST (no existe) => /users/user/:rut/wishlist
