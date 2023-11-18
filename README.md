@@ -19,3 +19,21 @@
 - Luego ejecutar con: `npm run dev`
 
 Si todo salio correcto, deberia estar en: `localhost:3000`
+
+
+# Taller express js
+ 
+Carlos: 
+- get: products
+- get: search by id
+- post: add item to cart
+- put: edit product
+- delete: item from cart
+
+Diferencia con los contratos: 
+- listar productos devuelve un campo adicional llamado, "imgUrl"
+- search el endpoint que aparece en los contratos para "search" es "/", el endpoint correspondiente es "/products/:id", existen dos endpoint para search ":id", ":name"
+- edit product es un POST en vez de PUT. El endpoint no es "/addProduct" es un POST "/products"
+- add product el endpoint no es "/cart" es "/user/cart/:rut"
+- delete product from cart no existe como contrato pero se agrego
+
