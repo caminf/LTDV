@@ -169,7 +169,7 @@ exports.loginUser = async (req, res) => {
     }
 };
 
-exports.updateUser = async (req, res) => {
+exports.editUser = async (req, res) => {
     const rut = req.params;
     try {
         const updatedUser = await User.findOneAndUpdate(rut,
