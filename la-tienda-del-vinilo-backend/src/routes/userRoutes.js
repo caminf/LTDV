@@ -1,12 +1,14 @@
-
 const express = require('express');
 const router = express.Router();
-const userController = require('../controllers/userController');
+const userController = require('../controllers/userController.js');
+const middlewares = require('../middleware.js');
 
+// import { authRequired, hasRole, hasAnyRole } from "../middlewares.js";
+router.get('/admin', userController.getUser);
 
 router.get('/users', userController.getAllUsers);
 router.get('/users/user/:rut', userController.getUser);
-router.post('/users',userController.createUser);
+router.post('/users' ,userController.createUser);
 router.post('/users/login',userController.loginUser);
 router.put('/admin/user/:rut/editUser',userController.editUser);
 
