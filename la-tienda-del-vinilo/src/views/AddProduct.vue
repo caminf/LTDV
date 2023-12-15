@@ -24,6 +24,15 @@
               required
             ></v-text-field>
             <v-text-field
+              ref="desc"
+              v-model="description"
+              variant="underlined"
+              :rules="[() => !!description || 'Campo obligatorio']"
+              :error-messages="errorMessages"
+              label="Descripción del producto"
+              required
+            ></v-text-field>
+            <v-text-field
               ref="Stock"
               v-model="stock"
               variant="underlined"
@@ -96,6 +105,7 @@ export default {
     errorMessages: "",
     id: null,
     name: null,
+    description: null,
     stock: null,
     price: null,
     img: null,
@@ -122,13 +132,14 @@ export default {
           const response = await axios.post('http://localhost:5000/api/products', {
             id: this.id,
             name: this.name,
+            description: this.description,
             stock: this.stock,
             price: this.price,
             imgUrl: this.img,
             category: this.selectedState
           });
           console.log('Datos guardados correctamente:', response.data);
-          this.$router.push('/Admin');
+          this.$router.push('/admin');
         } catch (error) {
           console.error('Error al guardar los datos:', error);
         }

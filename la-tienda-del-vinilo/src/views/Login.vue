@@ -54,8 +54,14 @@ export default {
             userFromDB.username === this.username &&
             userFromDB.password === this.password
           ) {
-            this.$router.push("/profile");
+            if (this.username === "admin" && this.password === "admin") {
+              this.$router.push("/admin");
+            } else {
+              this.$router.push("/");
+            }
+
             alert("Inicio de sesión exitoso");
+
           } else {
             this.errorMessage = "Nombre de usuario o contraseña incorrectos";
           }
