@@ -5,6 +5,7 @@ const userController = require('../controllers/userController');
 
 
 router.get('/users', userController.getAllUsers);
+router.get('/users/user/:rut', userController.getUser);
 router.post('/users',userController.createUser);
 router.post('/users/login',userController.loginUser);
 router.put('/admin/user/:rut/editUser',userController.editUser);
@@ -19,7 +20,5 @@ router.get('/users/user/:rut/wishlist', userController.getUserWishlist);
 
 router.get('/users/user/:rut/previouspurchases', userController.getUserPreviousPurchases);
 
-
-// router.get('/users/user', userController.getOneUser); (pendiente)
 
 module.exports = router;

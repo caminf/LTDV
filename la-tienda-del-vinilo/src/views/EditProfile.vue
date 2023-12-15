@@ -19,7 +19,7 @@
                                 <p class="UserInfoLabel">Nombre:</p>
                             </v-col>
                             <v-col>
-                                <v-text-field placeholder="Jane" variant="outlined" density="compact"
+                                <v-text-field :placeholder="user.name" variant="outlined" density="compact"
                                     class="TextField"></v-text-field>
                             </v-col>
                         </v-row>
@@ -28,8 +28,8 @@
                                 <p class="UserInfoLabel">Apellido:</p>
                             </v-col>
                             <v-col>
-                                <v-text-field placeholder="Doe" variant="outlined" density="compact"
-                                    class="TextField"></v-text-field>
+                                <v-text-field :placeholder="user.lastname" variant="outlined" density="compact" class="TextField">
+                                </v-text-field>
                             </v-col>
                         </v-row>
                         <v-row no-gutters>
@@ -39,7 +39,7 @@
                             <v-col>
                                 <div v-if="validateEmail()"></div>
                                 <div v-else></div>
-                                <v-text-field placeholder="janedoe83@correo.com" variant="outlined" density="compact"
+                                <v-text-field :placeholder="user.email" variant="outlined" density="compact"
                                     class="TextField"></v-text-field>
                             </v-col>
                         </v-row>
@@ -50,7 +50,7 @@
                             <v-col>
                                 <div v-if="validateNewUsername()"></div>
                                 <div v-else></div>
-                                <v-text-field placeholder="jane1983" variant="outlined" density="compact"
+                                <v-text-field :placeholder="user.username" variant="outlined" density="compact"
                                     class="TextField"></v-text-field>
                             </v-col>
                         </v-row>
@@ -60,7 +60,7 @@
         </v-card>
         <br>
         <div class="d-flex align-center">
-            <router-link class="button" to="/profile">
+            <router-link class="button" to="/users/user/:rut">
                 <v-btn color="#F8E3E3">
                     <h5 class="ma-1">Guardar cambios</h5>
                     <span class="material-symbols-outlined">
@@ -74,9 +74,18 @@
 
 <script setup>
 import { ref } from 'vue'
-import products from '../data/data.js'
 const keyword = ref("");
-import Searchbar from '../components/Searchbar.vue';
+let user = ref({});
+const rut = "203670605";
+
+import { useUserStore } from '../stores/UserStore';
+import { onMounted } from 'vue';
+
+const userStore = useUserStore();
+
+onMounted(async () => {
+    await userStore.fetchUser(rut).then((res) => { user.value = res });
+});
 
 function validateEmail(){}
 
@@ -84,6 +93,8 @@ function validateNewUsername(){}
 
 </script>
 
-<style lang="scss">.TextField {
+<style lang="scss">
+.TextField {
     padding-right: 25px;
-}</style>
+}
+</style>

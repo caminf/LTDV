@@ -74,20 +74,13 @@
             </td>
           </tr>
         </tbody>
-
       </v-table>
-
       <div class="d-flex justify-end py-3">
         <v-btn variant="tonal" append-icon="mdi-cart-check">
           Pagar
         </v-btn>
       </div>
-
-
-
     </div>
-
-
   </main>
 </template>
 
@@ -95,16 +88,12 @@
 import { useCartStore } from '@/stores/CartStore';
 import Searchbar from '@/components/Searchbar.vue';
 import ProfileButton from '@/components/ProfileButton.vue';
-
+import { onMounted } from 'vue';
 const cartStore = useCartStore();
 
-
-console.log(cartStore.productsTotal);
-
-console.log(cartStore.formattedCart)
-
-
-
+onMounted(() => {
+  cartStore.loadUser("203670605");
+});
 </script>
 
 <style lang ="scss">
@@ -114,18 +103,11 @@ console.log(cartStore.formattedCart)
   width: 75rem;
 }
 
-
 .red-border {
-
   border: 1px solid red;
-
-
 }
 
 .blue-border {
-
   border: 1px solid blue;
-
-
 }
 </style>

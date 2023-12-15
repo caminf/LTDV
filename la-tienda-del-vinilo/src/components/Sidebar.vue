@@ -4,7 +4,7 @@
             <img src="../assets/logo.png" alt="logo-tienda">
         </div>
         <div class="menu-toggle-wrap">
-            <button class="menu-toggle">
+            <button class="menu-toggle" background-color="#efe0b9">
                 <span class="material-symbols-outlined" @click="ToggleMenu">
                     start
                 </span>
