@@ -9,7 +9,8 @@ import EditProfile from '../views/EditProfile.vue'
 import Userview from '../views/Userview'
 import Admin from '../views/Admin'
 import AddProduct from '@/views/AddProduct.vue'
-
+import ProdcutDetail from '../views/ProductDetail.vue'
+import NotFound from '../views/NotFound.vue'
 const router = createRouter(
     {
         history: createWebHistory(),
@@ -40,9 +41,10 @@ const router = createRouter(
                 component: Login
             }, {
 
-                path: '/profile',
+                path: '/users/user/:rut',
                 name: 'profile',
-                component: Profile
+                component: Profile,
+                props: true
             },
             {
                 path: '/editprofile',
@@ -50,9 +52,10 @@ const router = createRouter(
                 component: EditProfile
             },
             {
-                path: '/userview',
+                path: '/users/user/:rut/userview',
                 name: 'userview',
-                component: Userview
+                component: Userview,
+                props: true
             },
             {
                 path: '/admin',
@@ -63,6 +66,17 @@ const router = createRouter(
                 path: '/AddProduct',
                 name: 'AddProduct',
                 component: AddProduct
+            },
+            {
+                path: '/productdetail/:id',
+                name: 'ProductDetail',
+                component: ProdcutDetail,
+                props: true
+            },
+            {
+                path: "/:pathMatch(.*)*",
+                name: "not-found",
+                component: NotFound,
             },
         ]
     }
