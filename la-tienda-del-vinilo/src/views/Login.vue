@@ -7,23 +7,11 @@
     <form @submit.prevent="login">
       <div class="form-group">
         <label for="username" style="display: none">Nombre de usuario:</label>
-        <input
-          type="text"
-          id="username"
-          v-model="username"
-          placeholder="Nombre de Usuario"
-          required
-        />
+        <input type="text" id="username" v-model="username" placeholder="Nombre de Usuario" required />
       </div>
       <div class="form-group">
         <label for="password" style="display: none">Contraseña:</label>
-        <input
-          type="password"
-          id="password"
-          v-model="password"
-          placeholder="Contraseña"
-          required
-        />
+        <input type="password" id="password" v-model="password" placeholder="Contraseña" required />
       </div>
       <button type="submit">Iniciar</button>
     </form>
@@ -36,8 +24,8 @@
   </div>
 </template>
   
-  <script>
-  import axios from 'axios';
+<script>
+import axios from 'axios';
 export default {
   data() {
     return {
@@ -84,7 +72,7 @@ export default {
 };
 </script>
 
-  <style scoped>
+<style scoped>
 .login-page {
   display: flex;
   flex-direction: column;
@@ -94,6 +82,7 @@ export default {
   align-items: center;
   min-height: 100vh;
 }
+
 h1 {
   font-size: 2rem;
   color: var(--grey);
@@ -113,6 +102,7 @@ form {
   font-size: 10rem;
   color: var(--dark);
 }
+
 .sidebar-image {
   position: fixed;
   right: 0;
@@ -127,6 +117,7 @@ form {
   height: 100%;
   object-fit: cover;
 }
+
 .icon-circle {
   text-align: center;
   background-color: var(--primary);

@@ -20,9 +20,9 @@ exports.createProduct = async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 };
-  
 
-exports.deleteProduct = async (req,res)=>{
+
+exports.deleteProduct = async (req, res) => {
     const productId = parseInt(req.body.id);
     try {
         const deletedProduct = await Product.findOneAndDelete({ id: productId });
@@ -36,10 +36,10 @@ exports.deleteProduct = async (req,res)=>{
     }
 };
 
-exports.updateProduct = async (req,res)=>{
+exports.updateProduct = async (req, res) => {
     const productId = parseInt(req.body.id);
-    try{
-        const updatedProduct = await Product.findOneAndUpdate({id: productId},
+    try {
+        const updatedProduct = await Product.findOneAndUpdate({ id: productId },
             {
                 name: req.body.name,
                 stock: req.body.stock,
@@ -48,14 +48,14 @@ exports.updateProduct = async (req,res)=>{
                 category: req.body.category,
                 rating: req.body.rating,
                 imgUrl: req.body.imgUrl
-            },{
-                new: true
-            });
+            }, {
+            new: true
+        });
         if (!updatedProduct) {
-          res.status(404).send('Producto no encontrado');
-        } 
+            res.status(404).send('Producto no encontrado');
+        }
         res.json(updatedProduct);
-    }catch(error){
+    } catch (error) {
         console.error('Error al actualizar el producto:', error);
         res.status(500).send('Error al actualizar el producto');
     }
@@ -77,21 +77,22 @@ exports.searchProductById = async (req, res) => {
     }
 };
 
-exports.searchProductByName = async (req, res) => {
-    console.log("aca");
-    const { name } = req.body;
-    try {
-        console.log(name);  
-        console.log("aca");
 
-        const product = await Product.find({ name: { $regex: name, $options: "i" } });
-        console.log(product);
+exports.searchProducts = async (req, res) => {
+    const name = req.query.name;
+    let query = {};
+    if (name) {
+        query = { name: { $regex: name, $options: "i" } };
+    }
+
+    try {
+        const product = await Product.findOne(query);
         if (!product) {
             return res.status(404).send('Producto no encontrado')
         }
         res.json(product)
-
     } catch (err) {
         console.log(err);
     }
 };
+
